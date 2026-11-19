@@ -32,7 +32,7 @@ async function verifyProvider() {
     console.log(`[OK] Provider is reachable: ${JSON.stringify(health.data)}`);
   } catch (err: any) {
     console.error(
-      `[ERROR] Provider at ${providerBaseUrl} is not reachable! Ensure project 13 is running.`,
+      `[ERROR] Provider at ${providerBaseUrl} is not reachable! Ensure the restaurant assistant is running.`,
     );
     throw err;
   }

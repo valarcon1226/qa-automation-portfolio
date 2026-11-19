@@ -1,6 +1,6 @@
 /**
  * Types and interfaces for the ParaBank Bill Pay batch automation.
- * Conforms to project 05 invoice extraction schemas while mapping fields
+ * Conforms to the invoice-processor extraction schemas while mapping fields
  * needed for ParaBank Bill Pay form submission.
  */
 

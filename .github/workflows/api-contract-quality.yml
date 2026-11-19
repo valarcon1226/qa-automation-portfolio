@@ -104,19 +104,19 @@ jobs:
       - name: Publish pact to Pact Broker
         run: npm run publish:pact
 
-      - name: Start Project 13 Restaurant Assistant Provider
+      - name: Start the restaurant assistant provider
         run: |
           docker compose -f ../whatsapp-restaurant-assistant/docker-compose.yml \
             -f docker-compose.p13-mount.yml \
             --project-directory ../whatsapp-restaurant-assistant up -d --wait
 
-      - name: Run Provider Verification against Project 13
+      - name: Run provider verification against the restaurant assistant
         run: npm run verify:provider
 
       - name: Run Can-I-Deploy Gate
         run: npm run can-i-deploy
 
-      - name: Start Project 20 E-commerce Order Automation
+      - name: Start the e-commerce order automation
         run: docker compose -f ../ecommerce-order-automation/docker-compose.yml up -d --wait
 
       - name: Run Schemathesis Property-Based Fuzzing
