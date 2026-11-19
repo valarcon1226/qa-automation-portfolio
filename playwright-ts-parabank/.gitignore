@@ -1,0 +1,11 @@
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+.env
+.DS_Store
+
+# Batch form-filler run outputs
+automation/payment-state.json
+automation/run-summary.json
+automation/rejected-records.json

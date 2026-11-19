@@ -1,0 +1,9 @@
+langchain
+langchain-ollama
+beautifulsoup4
+markdownify
+langgraph
+requests
+playwright
+scrapling[fetchers]
+pytest

@@ -3,17 +3,17 @@ name: Portfolio Automation CI
 on:
   pull_request:
     paths:
-      - "04-data-cleaning-api/**"
-      - "05-invoice-processor/**"
-      - "10-docker-compose-lab/**"
+      - "data-cleaning-api/**"
+      - "invoice-processor/**"
+      - "docker-compose-lab/**"
       - ".github/workflows/portfolio-automation-ci.yml"
   push:
     branches:
       - main
     paths:
-      - "04-data-cleaning-api/**"
-      - "05-invoice-processor/**"
-      - "10-docker-compose-lab/**"
+      - "data-cleaning-api/**"
+      - "invoice-processor/**"
+      - "docker-compose-lab/**"
       - ".github/workflows/portfolio-automation-ci.yml"
   workflow_dispatch:
 
@@ -34,13 +34,13 @@ jobs:
       matrix:
         # Only projects with real code and tests are listed. Add a project here once it has both.
         include:
-          - project: 04-data-cleaning-api
+          - project: data-cleaning-api
             src: app
-            slug: 04-data-cleaning-api
-          - project: 05-invoice-processor
+            slug: data-cleaning-api
+          - project: invoice-processor
             src: app
-            slug: 05-invoice-processor
-          - project: 10-docker-compose-lab/backend
+            slug: invoice-processor
+          - project: docker-compose-lab/backend
             src: src
             slug: 10-backend
     defaults:
@@ -93,7 +93,7 @@ jobs:
           retention-days: 7
 
   readme-sync:
-    name: 10-docker-compose-lab README sync
+    name: docker-compose-lab README sync
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -106,5 +106,5 @@ jobs:
           python-version: "3.12"
 
       - name: README sections match .env.example, docker-compose.yml and init-db.sh
-        working-directory: 10-docker-compose-lab
+        working-directory: docker-compose-lab
         run: python scripts/sync_readme.py --check
