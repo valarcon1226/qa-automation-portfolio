@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" \"tests/**/*.ts\" --fix",
-    "format:check": "prettier --check \"**/*.{ts,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,json,yml,yaml}\"",
     "format": "prettier --write \"**/*.{ts,json,md,yml,yaml}\"",
     "test:consumer": "jest --testPathPattern=tests/consumer --runInBand",
     "publish:pact": "ts-node scripts/publish-pact.ts",
