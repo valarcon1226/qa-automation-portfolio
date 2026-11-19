@@ -106,7 +106,10 @@ export async function verifyAccountActivity(
 
   const rows = page.locator('#transactionTable tbody tr');
   // The rows are filled by an XHR after the table is already visible.
-  await rows.first().waitFor({ state: 'attached', timeout: timeoutMs }).catch(() => {});
+  await rows
+    .first()
+    .waitFor({ state: 'attached', timeout: timeoutMs })
+    .catch(() => {});
   const count = await rows.count();
 
   if (count === 0) {

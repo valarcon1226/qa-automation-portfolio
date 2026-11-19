@@ -66,7 +66,8 @@ def generate_synthetic_50plus_page_pdf(total_pages: int = 52) -> bytes:
                 c.drawString(
                     50,
                     y_pos,
-                    f"Cláusula {page_num}.{y_pos}: Términos generales de ejecución contractual y cumplimiento normativo.",
+                    f"Cláusula {page_num}.{y_pos}: Términos generales de ejecución contractual"
+                    " y cumplimiento normativo.",
                 )
 
         c.showPage()

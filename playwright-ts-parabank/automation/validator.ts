@@ -29,7 +29,7 @@ export function validateInvoiceRecord(raw: unknown): ValidationResult {
     };
   }
 
-  // 2. payee name validation (issuer_name from project `invoice-processor` schema)
+  // 2. payee name validation (issuer_name from project 05 schema)
   const payeeNameRaw = record.issuer_name ?? rawObj.payeeName ?? rawObj.payee ?? rawObj.vendor_name;
   const payeeName =
     payeeNameRaw !== undefined && payeeNameRaw !== null ? String(payeeNameRaw).trim() : '';
@@ -133,7 +133,7 @@ export function validateInvoiceRecord(raw: unknown): ValidationResult {
   const verifyAccountRaw = record.verifyAccount ?? rawObj.verify_account ?? accountNumber;
   const verifyAccount = String(verifyAccountRaw).trim();
 
-  // 6. Amount validation (total from project `invoice-processor` schema)
+  // 6. Amount validation (total from project 05 schema)
   const amountVal = record.total ?? record.amount;
   if (amountVal === undefined || amountVal === null) {
     return {

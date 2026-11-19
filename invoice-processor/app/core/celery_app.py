@@ -10,7 +10,7 @@ from celery import Celery
 from app.core.config import settings
 from app.core.ocr_engine import ocr_engine
 from app.models.database import Invoice, LineItem, SessionLocal
-from app.services.extractor import extractor
+from app.services.extractor import ExtractedInvoice, extractor
 from app.services.storage import storage_service
 from app.services.validator import validator
 
@@ -64,7 +64,10 @@ def process_invoice_task(self, file_b64: str, filename: str) -> dict:
             state="PROCESSING",
             meta={"progress": "80%", "message": "Extracting fields and validating rules"},
         )
-        extracted = extractor.extract(raw_text)
+        # This queue stores invoices (the Invoice table); certificates go through the sync endpoint.
+        extracted = extractor.extract(raw_text, doc_type="INVOICE")
+        if not isinstance(extracted, ExtractedInvoice):
+            raise ValueError("The async queue only processes invoices")
         is_valid, validation_errors = validator.validate(extracted)
 
         # Save to database
