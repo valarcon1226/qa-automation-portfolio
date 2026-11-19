@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_07",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "IBERIA SOFTWARE SOLUTIONS SL",
+  "issuer_vat": "ESB-12345678",
+  "invoice_number": "INV-2026-107",
+  "invoice_date": "2026-10-07",
+  "subtotal": 4500.0,
+  "tax_amount": 945.0,
+  "total": 5445.0,
+  "currency": "EUR"
+}

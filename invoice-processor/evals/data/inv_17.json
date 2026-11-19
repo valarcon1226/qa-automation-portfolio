@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_17",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "EUROPA LOGISTIK SERVICES GMBH",
+  "issuer_vat": "DE-998877665",
+  "invoice_number": "INV-2026-117",
+  "invoice_date": "2026-10-17",
+  "subtotal": 5200.0,
+  "tax_amount": 988.0,
+  "total": 6188.0,
+  "currency": "EUR"
+}

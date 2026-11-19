@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_04",
+  "format": "xlsx",
+  "doc_type": "ACORD_25",
+  "insured_name": "SUMMIT INDUSTRIAL CONTRACTORS",
+  "insurer_name": "CHUBB INDEMNITY INSURANCE CO",
+  "policy_number": "GL-77665544-04",
+  "effective_date": "2026-04-01",
+  "expiration_date": "2027-04-01",
+  "coverage_limits": {
+    "each_occurrence": 1500000.0,
+    "general_aggregate": 3000000.0
+  }
+}

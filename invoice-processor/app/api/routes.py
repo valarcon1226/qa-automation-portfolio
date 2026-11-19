@@ -18,6 +18,7 @@ from app.core.config import settings
 from app.core.ocr_engine import ocr_engine
 from app.models.database import Invoice, LineItem
 from app.models.schemas import (
+    Acord25Certificate,
     ExportRequest,
     InvoiceListItem,
     InvoiceListResponse,
@@ -25,7 +26,7 @@ from app.models.schemas import (
     JobResponse,
 )
 from app.services.exporter import exporter
-from app.services.extractor import extractor
+from app.services.extractor import ExtractedInvoice, extractor
 from app.services.storage import storage_service
 from app.services.validator import validator
 
@@ -33,7 +34,7 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-ALLOWED_EXTENSIONS = {".pdf", ".png", ".jpg", ".jpeg", ".tif", ".tiff"}
+ALLOWED_EXTENSIONS = {".pdf", ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".xlsx"}
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 
 
@@ -74,9 +75,10 @@ async def _read_upload(file: UploadFile) -> tuple[str, bytes]:
 )
 async def process_invoice_sync(
     file: UploadFile = File(...),
+    method: str = Query("regex", description="Extraction method: 'regex' or 'llm'"),
     db: Session = Depends(get_db),
 ) -> InvoiceResponse:
-    """Synchronously processes a single invoice (PDF or image)."""
+    """Synchronously processes a single invoice (PDF, XLSX, or image)."""
     filename, content = await _read_upload(file)
     pages = ocr_engine.count_pages(content, filename)
     if pages > settings.max_sync_pages:
@@ -110,7 +112,12 @@ async def process_invoice_sync(
         logger.exception("Could not store %s in MinIO", minio_key)
 
     # 3. Extraction & Validation
-    extracted = extractor.extract(raw_text)
+    extracted = extractor.extract(raw_text, method=method, doc_type="INVOICE")
+    if not isinstance(extracted, ExtractedInvoice):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="El documento no pudo procesarse como factura.",
+        )
     is_valid, validation_errors = validator.validate(extracted)
 
     # 4. Save to Database
@@ -156,7 +163,45 @@ async def process_invoice_sync(
         .where(Invoice.invoice_id == invoice_record.invoice_id)
     ).first()
 
-    return InvoiceResponse.model_validate(result)
+    response_obj = InvoiceResponse.model_validate(result)
+    response_obj.field_sources = extracted.field_sources
+    return response_obj
+
+
+@router.post(
+    "/api/v1/insurance/process",
+    response_model=Acord25Certificate,
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_bearer_token)],
+)
+@router.post(
+    "/insurance/process",
+    response_model=Acord25Certificate,
+    status_code=status.HTTP_200_OK,
+    dependencies=[Depends(verify_bearer_token)],
+    include_in_schema=False,
+)
+async def process_insurance_sync(
+    file: UploadFile = File(...),
+    method: str = Query("regex", description="Extraction method: 'regex' or 'llm'"),
+) -> Acord25Certificate:
+    """Synchronously processes an ACORD 25 insurance certificate (PDF, XLSX, or image)."""
+    filename, content = await _read_upload(file)
+    try:
+        raw_text, _ = ocr_engine.process_file(content, filename)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Fallo en motor de lectura: {exc}",
+        ) from exc
+
+    extracted = extractor.extract(raw_text, method=method, doc_type="ACORD_25")
+    if not isinstance(extracted, Acord25Certificate):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="El documento no pudo procesarse como certificado ACORD 25.",
+        )
+    return extracted
 
 
 @router.post(

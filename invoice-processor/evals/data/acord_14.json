@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_14",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "STERLING FINANCIAL CONSULTANTS",
+  "insurer_name": "HANOVER INSURANCE GROUP",
+  "policy_number": "GL-55667788-14",
+  "effective_date": "2026-04-15",
+  "expiration_date": "2027-04-15",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

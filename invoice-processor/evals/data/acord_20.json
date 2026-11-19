@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_20",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "TRI-STATE ELECTRIC & UTILITY",
+  "insurer_name": "HARTFORD ACCIDENT & INDEMNITY",
+  "policy_number": "GL-65432109-20",
+  "effective_date": "2026-10-15",
+  "expiration_date": "2027-10-15",
+  "coverage_limits": {
+    "each_occurrence": 2000000.0,
+    "general_aggregate": 4000000.0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_20",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "COMUNICACIONES SATELITALES S.A.",
+  "issuer_vat": "800.123.987-4",
+  "invoice_number": "FEV-120",
+  "invoice_date": "2026-10-20",
+  "subtotal": 7800000.0,
+  "tax_amount": 1482000.0,
+  "total": 9282000.0,
+  "currency": "COP"
+}

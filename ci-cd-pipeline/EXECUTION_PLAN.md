@@ -32,8 +32,8 @@ Source of truth: `README.md`.
 - [x] Docker Compose stack:
   - `docker-compose.yml`: Services `db` (`postgres:16-alpine`) and `api` (`127.0.0.1:8022:8000`), with discrete healthchecks and isolated network.
   - `.env.example`: Configuration template with `change_me_` defaults.
-- [x] GitHub Actions workflow `.github/workflows/12-ci-cd.yml`:
-  - Path filters: `ci-cd-pipeline/**` and `.github/workflows/12-ci-cd.yml`.
+- [x] GitHub Actions workflow `.github/workflows/ci-cd-pipeline.yml`:
+  - Path filters: `ci-cd-pipeline/**` and `.github/workflows/ci-cd-pipeline.yml`.
   - Matrix testing: Python 3.11 and 3.12.
   - Quality gates: Ruff check, Ruff format check, Mypy type-check, Bandit SAST scan.
   - Tests: Pytest unit tests with coverage enforcement (>= 80%) + Testcontainers integration tests.
@@ -48,13 +48,13 @@ Source of truth: `README.md`.
   - Pytest unit tests pass (14 passed, >= 95% coverage).
   - Pytest integration tests with Testcontainers pass against real PostgreSQL.
   - Trivy scan passes with 0 CRITICAL vulnerabilities.
-  - `actionlint` passes with 0 errors on `.github/workflows/12-ci-cd.yml`.
+  - `actionlint` passes with 0 errors on `.github/workflows/ci-cd-pipeline.yml`.
   - Docker Compose up/ps/e2e/down verified successfully.
 
 ---
 
 ## Definition of Done
-- [x] CI/CD pipeline workflow created at repository root (`.github/workflows/12-ci-cd.yml`).
+- [x] CI/CD pipeline workflow created at repository root (`.github/workflows/ci-cd-pipeline.yml`).
 - [x] Existing workflow `.github/workflows/portfolio-automation-ci.yml` kept completely untouched.
 - [x] Quality gates (Ruff, Mypy, Bandit, Pytest >= 80%, Trivy, Actionlint) passing locally and in CI.
 - [x] Container runs as non-root user on slim image without CRITICAL vulnerabilities.

@@ -19,6 +19,12 @@ class Settings(BaseSettings):
     max_sync_pages: int = 1
     tesseract_cmd: str = "tesseract"
 
+    # LLM Configuration (OpenAI-compatible, defaults to local Ollama)
+    llm_base_url: str = "http://localhost:11434/v1"
+    llm_model: str = "qwen3:4b-instruct-2507-q4_K_M"
+    llm_api_key: str = "ollama"
+    llm_timeout: float = 60.0  # seconds per request; raise it for CPU-only local models
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

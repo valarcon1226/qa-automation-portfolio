@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_03",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "NEXUS CLOUD SYSTEMS LLC",
+  "issuer_vat": "US-987654321",
+  "invoice_number": "INV-2026-103",
+  "invoice_date": "2026-10-03",
+  "subtotal": 1200.0,
+  "tax_amount": 120.0,
+  "total": 1320.0,
+  "currency": "USD"
+}

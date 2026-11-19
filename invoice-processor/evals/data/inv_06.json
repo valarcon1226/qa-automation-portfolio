@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_06",
+  "format": "xlsx",
+  "doc_type": "INVOICE",
+  "issuer_name": "APEX DATA SERVICES INC",
+  "issuer_vat": "US-112233445",
+  "invoice_number": "INV-2026-106",
+  "invoice_date": "2026-10-06",
+  "subtotal": 3500.0,
+  "tax_amount": 350.0,
+  "total": 3850.0,
+  "currency": "USD"
+}

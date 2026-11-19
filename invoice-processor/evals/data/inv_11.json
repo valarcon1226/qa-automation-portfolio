@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_11",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "PACIFIC RIM SECURITY SYSTEMS",
+  "issuer_vat": "US-445566778",
+  "invoice_number": "INV-2026-111",
+  "invoice_date": "2026-10-11",
+  "subtotal": 850.0,
+  "tax_amount": 85.0,
+  "total": 935.0,
+  "currency": "USD"
+}

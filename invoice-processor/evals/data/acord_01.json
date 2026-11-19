@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_01",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "ANDES LOGISTICS GROUP LLC",
+  "insurer_name": "TRAVELERS CASUALTY AND SURETY COMPANY",
+  "policy_number": "GL-98765432-01",
+  "effective_date": "2026-01-01",
+  "expiration_date": "2027-01-01",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

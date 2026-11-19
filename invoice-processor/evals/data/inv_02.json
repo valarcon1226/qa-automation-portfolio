@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_02",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "DISTRIBUIDORA DEL CAUCA LTDA",
+  "issuer_vat": "890.111.222-3",
+  "invoice_number": "FEV-102",
+  "invoice_date": "2026-10-02",
+  "subtotal": 1500000.0,
+  "tax_amount": 285000.0,
+  "total": 1785000.0,
+  "currency": "COP"
+}

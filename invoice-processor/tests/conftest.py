@@ -41,6 +41,14 @@ def mock_storage_ensure_bucket(monkeypatch):
     """Mocks MinIO ensure_bucket so tests do not hang on network."""
     monkeypatch.setattr("app.services.storage.storage_service.ensure_bucket", lambda: None)
     monkeypatch.setattr("app.main.storage_service.ensure_bucket", lambda: None)
+    monkeypatch.setattr(
+        "app.services.storage.storage_service.upload_file",
+        lambda key, content: f"minio://{key}",
+    )
+    monkeypatch.setattr(
+        "app.services.storage.storage_service.upload_text",
+        lambda key, content: f"minio://{key}",
+    )
 
 
 @pytest.fixture

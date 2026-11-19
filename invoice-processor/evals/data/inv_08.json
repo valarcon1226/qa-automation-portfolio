@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_08",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "PETROQUIMICA NACIONAL S.A.",
+  "issuer_vat": "800.333.444-9",
+  "invoice_number": "FEV-108",
+  "invoice_date": "2026-10-08",
+  "subtotal": 18000000.0,
+  "tax_amount": 3420000.0,
+  "total": 21420000.0,
+  "currency": "COP"
+}

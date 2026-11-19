@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_19",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "HARBORVIEW HOTEL & RESORTS",
+  "insurer_name": "TRAVELERS CASUALTY AND SURETY COMPANY",
+  "policy_number": "POL-78901234-19",
+  "effective_date": "2026-09-15",
+  "expiration_date": "2027-09-15",
+  "coverage_limits": {
+    "each_occurrence": 3000000.0,
+    "general_aggregate": 5000000.0
+  }
+}

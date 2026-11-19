@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_06",
+  "format": "xlsx",
+  "doc_type": "ACORD_25",
+  "insured_name": "HORIZON SOLAR INSTALLATIONS INC",
+  "insurer_name": "ZURICH AMERICAN INSURANCE CO",
+  "policy_number": "GL-99887766-06",
+  "effective_date": "2026-06-01",
+  "expiration_date": "2027-06-01",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

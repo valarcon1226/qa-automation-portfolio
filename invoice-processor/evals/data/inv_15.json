@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_15",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "CYBERNET NETWORKS CORP",
+  "issuer_vat": "US-887766554",
+  "invoice_number": "INV-2026-115",
+  "invoice_date": "2026-10-15",
+  "subtotal": 2100.0,
+  "tax_amount": 210.0,
+  "total": 2310.0,
+  "currency": "USD"
+}

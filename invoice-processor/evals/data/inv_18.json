@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_18",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "SEGURIDAD PRIVADA Y VIGILANCIA LTDA",
+  "issuer_vat": "890.333.222-1",
+  "invoice_number": "FEV-118",
+  "invoice_date": "2026-10-18",
+  "subtotal": 4100000.0,
+  "tax_amount": 779000.0,
+  "total": 4879000.0,
+  "currency": "COP"
+}

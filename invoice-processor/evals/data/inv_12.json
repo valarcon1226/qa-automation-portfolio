@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_12",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "INGENIERIA Y DISENO ANDINO S.A.S.",
+  "issuer_vat": "901.444.333-5",
+  "invoice_number": "FEV-112",
+  "invoice_date": "2026-10-12",
+  "subtotal": 3200000.0,
+  "tax_amount": 608000.0,
+  "total": 3808000.0,
+  "currency": "COP"
+}

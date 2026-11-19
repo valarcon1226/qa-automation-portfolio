@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_01",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "ANDINA TECNOLOGICA S.A.S.",
+  "issuer_vat": "900.123.456-8",
+  "invoice_number": "FEV-101",
+  "invoice_date": "2026-10-01",
+  "subtotal": 2000000.0,
+  "tax_amount": 380000.0,
+  "total": 2380000.0,
+  "currency": "COP"
+}

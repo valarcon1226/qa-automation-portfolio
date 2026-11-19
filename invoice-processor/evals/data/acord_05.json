@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_05",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "VALLEY HEALTHCARE SOLUTIONS LLC",
+  "insurer_name": "CNA FINANCIAL CORP",
+  "policy_number": "GL-33445566-05",
+  "effective_date": "2026-05-01",
+  "expiration_date": "2027-05-01",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 3000000.0
+  }
+}

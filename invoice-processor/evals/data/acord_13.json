@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_13",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "OAKLAND ROOFING & SHEET METAL",
+  "insurer_name": "STATE FARM GENERAL INSURANCE",
+  "policy_number": "POL-34567890-13",
+  "effective_date": "2026-03-15",
+  "expiration_date": "2027-03-15",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

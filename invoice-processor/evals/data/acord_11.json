@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_11",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "BEACON ARCHITECTURE PARTNERS",
+  "insurer_name": "TRAVELERS CASUALTY AND SURETY COMPANY",
+  "policy_number": "GL-22334455-11",
+  "effective_date": "2026-01-15",
+  "expiration_date": "2027-01-15",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

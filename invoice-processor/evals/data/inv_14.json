@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_14",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "CONSTRUCCIONES CIVILES DEL CARIBE",
+  "issuer_vat": "900.222.111-0",
+  "invoice_number": "FEV-114",
+  "invoice_date": "2026-10-14",
+  "subtotal": 15000000.0,
+  "tax_amount": 2850000.0,
+  "total": 17850000.0,
+  "currency": "COP"
+}

@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_10",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "PIONEER DRILLING & EXPLORATION",
+  "insurer_name": "GREAT AMERICAN INSURANCE CO",
+  "policy_number": "POL-90123456-10",
+  "effective_date": "2026-10-01",
+  "expiration_date": "2027-10-01",
+  "coverage_limits": {
+    "each_occurrence": 5000000.0,
+    "general_aggregate": 10000000.0
+  }
+}

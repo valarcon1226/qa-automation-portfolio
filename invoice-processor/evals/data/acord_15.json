@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_15",
+  "format": "xlsx",
+  "doc_type": "ACORD_25",
+  "insured_name": "CENTRAL COAST WINERY CORP",
+  "insurer_name": "MARKEL AMERICAN INSURANCE CO",
+  "policy_number": "GL-77889900-15",
+  "effective_date": "2026-05-15",
+  "expiration_date": "2027-05-15",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

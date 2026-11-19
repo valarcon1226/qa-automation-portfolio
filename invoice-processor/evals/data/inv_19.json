@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_19",
+  "format": "xlsx",
+  "doc_type": "INVOICE",
+  "issuer_name": "CONSULTORES JURIDICOS ASOCIADOS SAS",
+  "issuer_vat": "901.888.999-3",
+  "invoice_number": "FEV-119",
+  "invoice_date": "2026-10-19",
+  "subtotal": 2500000.0,
+  "tax_amount": 475000.0,
+  "total": 2975000.0,
+  "currency": "COP"
+}

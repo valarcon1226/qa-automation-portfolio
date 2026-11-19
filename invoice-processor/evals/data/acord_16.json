@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_16",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "MIDWEST AGRI PRODUCTS LLC",
+  "insurer_name": "WESTFIELD INSURANCE CO",
+  "policy_number": "POL-56789012-16",
+  "effective_date": "2026-06-15",
+  "expiration_date": "2027-06-15",
+  "coverage_limits": {
+    "each_occurrence": 2000000.0,
+    "general_aggregate": 4000000.0
+  }
+}

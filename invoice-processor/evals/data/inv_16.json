@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_16",
+  "format": "xlsx",
+  "doc_type": "INVOICE",
+  "issuer_name": "DOTACIONES EMPRESARIALES DE COLOMBIA",
+  "issuer_vat": "900.888.777-6",
+  "invoice_number": "FEV-116",
+  "invoice_date": "2026-10-16",
+  "subtotal": 1800000.0,
+  "tax_amount": 342000.0,
+  "total": 2142000.0,
+  "currency": "COP"
+}

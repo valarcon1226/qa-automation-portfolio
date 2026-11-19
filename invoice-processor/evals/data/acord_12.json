@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_12",
+  "format": "xlsx",
+  "doc_type": "ACORD_25",
+  "insured_name": "CASCADE AVIATION LOGISTICS",
+  "insurer_name": "ALLIANZ GLOBAL CORPORATE",
+  "policy_number": "GL-66778899-12",
+  "effective_date": "2026-02-15",
+  "expiration_date": "2027-02-15",
+  "coverage_limits": {
+    "each_occurrence": 3000000.0,
+    "general_aggregate": 6000000.0
+  }
+}

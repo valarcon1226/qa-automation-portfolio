@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_10",
+  "format": "xlsx",
+  "doc_type": "INVOICE",
+  "issuer_name": "TEXTILES DE OCCIDENTE S.A.",
+  "issuer_vat": "890.999.888-4",
+  "invoice_number": "FEV-110",
+  "invoice_date": "2026-10-10",
+  "subtotal": 6000000.0,
+  "tax_amount": 1140000.0,
+  "total": 7140000.0,
+  "currency": "COP"
+}

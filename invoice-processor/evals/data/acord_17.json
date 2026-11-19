@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_17",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "SUNSHINE PLUMBING & MECHANICAL",
+  "insurer_name": "CINCINNATI INSURANCE CO",
+  "policy_number": "GL-12344321-17",
+  "effective_date": "2026-07-15",
+  "expiration_date": "2027-07-15",
+  "coverage_limits": {
+    "each_occurrence": 1000000.0,
+    "general_aggregate": 2000000.0
+  }
+}

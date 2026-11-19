@@ -14,3 +14,4 @@ minio==7.2.15
 httpx==0.28.1
 pypdf==5.3.1
 reportlab==4.3.1
+openpyxl==3.1.5

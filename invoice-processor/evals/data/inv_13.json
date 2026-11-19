@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_13",
+  "format": "xlsx",
+  "doc_type": "INVOICE",
+  "issuer_name": "FARMACEUTICA DEL PACIFICO S.A.",
+  "issuer_vat": "800.666.777-1",
+  "invoice_number": "FEV-113",
+  "invoice_date": "2026-10-13",
+  "subtotal": 9500000.0,
+  "tax_amount": 1805000.0,
+  "total": 11305000.0,
+  "currency": "COP"
+}

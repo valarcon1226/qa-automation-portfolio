@@ -1,0 +1,108 @@
+{
+  "evaluation_timestamp": "2026-11-19 19:28:47 UTC",
+  "total_documents": 40,
+  "llm_configuration": {
+    "base_url": "http://localhost:11434/v1",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "connected": true,
+    "status": "COMPLETED",
+    "notes": "LLM was accessible and executed"
+  },
+  "llm_calls": {
+    "attempted": 40,
+    "failed": [
+      {
+        "doc_id": "inv_14",
+        "error": "LLM output failed validation for InvoiceResponse after 2 attempts: 1 validation error for InvoiceResponse\ninvoice_id\n  Input should be a valid UUID, invalid length: expected length 32 for simple forma"
+      }
+    ]
+  },
+  "invoice_metrics": {
+    "issuer_name": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "issuer_vat": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "invoice_number": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "invoice_date": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "subtotal": {
+      "samples": 20,
+      "regex_correct": 18,
+      "regex_accuracy": "90.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "tax_amount": {
+      "samples": 20,
+      "regex_correct": 18,
+      "regex_accuracy": "90.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "total": {
+      "samples": 20,
+      "regex_correct": 18,
+      "regex_accuracy": "90.0%",
+      "llm_accuracy": "95.0%"
+    },
+    "currency": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "20.0%"
+    }
+  },
+  "acord25_metrics": {
+    "insured_name": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "100.0%"
+    },
+    "insurer_name": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "100.0%"
+    },
+    "policy_number": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "100.0%"
+    },
+    "effective_date": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "100.0%"
+    },
+    "expiration_date": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "100.0%"
+    },
+    "coverage_limits": {
+      "samples": 20,
+      "regex_correct": 20,
+      "regex_accuracy": "100.0%",
+      "llm_accuracy": "100.0%"
+    }
+  }
+}

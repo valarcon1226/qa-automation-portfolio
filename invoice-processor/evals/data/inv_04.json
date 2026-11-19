@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_04",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "LOGISTICA CARGO EXPRESS S.A.",
+  "issuer_vat": "901.234.567-7",
+  "invoice_number": "FEV-104",
+  "invoice_date": "2026-10-04",
+  "subtotal": 5000000.0,
+  "tax_amount": 950000.0,
+  "total": 5950000.0,
+  "currency": "COP"
+}

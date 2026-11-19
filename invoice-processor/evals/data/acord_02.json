@@ -1,0 +1,14 @@
+{
+  "doc_id": "acord_02",
+  "format": "pdf",
+  "doc_type": "ACORD_25",
+  "insured_name": "BUILDERS & DEVELOPERS CORP",
+  "insurer_name": "HARTFORD FIRE INSURANCE CO",
+  "policy_number": "POL-55443322-02",
+  "effective_date": "2026-02-01",
+  "expiration_date": "2027-02-01",
+  "coverage_limits": {
+    "each_occurrence": 2000000.0,
+    "general_aggregate": 4000000.0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_09",
+  "format": "pdf",
+  "doc_type": "INVOICE",
+  "issuer_name": "SERVICIOS INTEGRALES DE ASEO SAS",
+  "issuer_vat": "900.777.888-2",
+  "invoice_number": "FEV-109",
+  "invoice_date": "2026-10-09",
+  "subtotal": 1100000.0,
+  "tax_amount": 209000.0,
+  "total": 1309000.0,
+  "currency": "COP"
+}

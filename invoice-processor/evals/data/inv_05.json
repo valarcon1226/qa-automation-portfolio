@@ -1,0 +1,13 @@
+{
+  "doc_id": "inv_05",
+  "format": "xlsx",
+  "doc_type": "INVOICE",
+  "issuer_name": "SUMINISTROS INDUSTRIALES SAS",
+  "issuer_vat": "900.555.666-1",
+  "invoice_number": "FEV-105",
+  "invoice_date": "2026-10-05",
+  "subtotal": 800000.0,
+  "tax_amount": 152000.0,
+  "total": 952000.0,
+  "currency": "COP"
+}
