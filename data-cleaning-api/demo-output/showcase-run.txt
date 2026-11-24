@@ -1,0 +1,50 @@
+﻿.venv\Scripts\python.exe -c '<FastAPI TestClient app.main:app POST /api/v1/clean and /api/v1/validate>'
+=== RAW INPUT CSV ===
+id,name,email,age,city
+1,  Ana Garcia  ,ANA@EXAMPLE.COM,30,Bogota
+,,,,
+1,  Ana Garcia  ,ANA@EXAMPLE.COM,30,Bogota
+2,  Luis Perez ,luis@example.com,,Medellin
+3,  Maria Lopez ,maria@example.com,25,Cali
+
+=== POST /api/v1/clean === 200
+{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Ana Garcia",
+      "email": "ANA@EXAMPLE.COM",
+      "age": 30,
+      "city": "Bogota"
+    },
+    {
+      "id": 2,
+      "name": "Luis Perez",
+      "email": "luis@example.com",
+      "age": 0,
+      "city": "Medellin"
+    },
+    {
+      "id": 3,
+      "name": "Maria Lopez",
+      "email": "maria@example.com",
+      "age": 25,
+      "city": "Cali"
+    }
+  ]
+}
+=== POST /api/v1/validate === 200
+{
+  "status": "invalid",
+  "errors": [
+    {
+      "schema_context": "Column",
+      "column": "age",
+      "check": "greater_than_or_equal_to(0)",
+      "check_number": 0,
+      "failure_case": -5,
+      "index": 1
+    }
+  ]
+}

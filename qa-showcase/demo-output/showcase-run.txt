@@ -1,0 +1,41 @@
+﻿.venv\Scripts\python.exe -m pytest -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\qa-showcase\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.12.14', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '9.1.1', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.15.1', 'base-url': '2.1.0', 'html': '4.2.0', 'metadata': '3.1.1', 'playwright': '0.9.0'}, 'JAVA_HOME': 'C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.20.101-hotspot\\', 'Base URL': ''}
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\qa-showcase
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, base-url-2.1.0, html-4.2.0, metadata-3.1.1, playwright-0.9.0
+collecting ... collected 26 items
+
+tests/api/test_restful_booker.py::test_get_booking_ids PASSED            [  3%]
+tests/api/test_restful_booker.py::test_get_booking PASSED                [  7%]
+tests/api/test_restful_booker.py::test_create_booking PASSED             [ 11%]
+tests/api/test_restful_booker.py::test_update_booking PASSED             [ 15%]
+tests/api/test_restful_booker.py::test_delete_booking PASSED             [ 19%]
+tests/api/test_restful_booker.py::test_api_negative_invalid_token PASSED [ 23%]
+tests/api/test_restful_booker.py::test_api_negative_non_existent_id PASSED [ 26%]
+tests/api/test_restful_booker.py::test_api_negative_post_missing_data PASSED [ 30%]
+tests/ui/test_cart.py::test_cart_contents[chromium-standard] PASSED      [ 34%]
+tests/ui/test_checkout.py::test_successful_checkout[chromium-standard] PASSED [ 38%]
+tests/ui/test_checkout.py::test_checkout_form_validations[chromium] PASSED [ 42%]
+tests/ui/test_inventory.py::test_add_item_to_cart[chromium-standard] PASSED [ 46%]
+tests/ui/test_inventory.py::test_remove_item_from_cart[chromium-standard] PASSED [ 50%]
+tests/ui/test_inventory.py::test_inventory_sorting_standard[chromium] PASSED [ 53%]
+tests/ui/test_inventory.py::test_inventory_sorting_problem[chromium] XFAIL [ 57%]
+tests/ui/test_inventory.py::test_inventory_images_problem[chromium] XFAIL [ 61%]
+tests/ui/test_inventory.py::test_add_all_items_problem[chromium] XFAIL   [ 65%]
+tests/ui/test_login.py::test_valid_login[chromium-standard] PASSED       [ 69%]
+tests/ui/test_login.py::test_locked_out_user[chromium] PASSED            [ 73%]
+tests/ui/test_login.py::test_invalid_login_wrong_password[chromium] PASSED [ 76%]
+tests/ui/test_login.py::test_invalid_login_empty_fields[chromium] PASSED [ 80%]
+tests/ui/test_cart.py::test_cart_contents[chromium-problem] PASSED       [ 84%]
+tests/ui/test_checkout.py::test_successful_checkout[chromium-problem] XFAIL [ 88%]
+tests/ui/test_inventory.py::test_add_item_to_cart[chromium-problem] PASSED [ 92%]
+tests/ui/test_inventory.py::test_remove_item_from_cart[chromium-problem] XFAIL [ 96%]
+tests/ui/test_login.py::test_valid_login[chromium-problem] PASSED        [100%]
+
+- Generated html report: file:///C:/Users/valentina.alarcon/Documents/PER/Cursos/Claudia/Portfolio%20Gemini/Potrafolio-Automation/qa-showcase/reports/report.html -
+================== 21 passed, 5 xfailed in 125.05s (0:02:05) ==================
+

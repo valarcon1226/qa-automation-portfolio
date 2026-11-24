@@ -1,0 +1,88 @@
+.venv\Scripts\python.exe -m pytest -v 
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\lead-generator\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\lead-generator
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, cov-7.1.0, timeout-2.4.0
+collecting ... collected 72 items / 2 deselected / 70 selected
+
+tests/test_config.py::test_settings_load_from_env PASSED                 [  1%]
+tests/test_config.py::test_settings_require_database_url_and_api_key PASSED [  2%]
+tests/test_dedup.py::test_merges_same_phone_near_duplicate_names PASSED  [  4%]
+tests/test_dedup.py::test_merges_same_website_domain_near_duplicate_names PASSED [  5%]
+tests/test_dedup.py::test_does_not_merge_distinct_companies_with_similar_names PASSED [  7%]
+tests/test_dedup.py::test_does_not_merge_unrelated_companies_even_with_no_identity_fields PASSED [  8%]
+tests/test_dedup.py::test_respects_custom_threshold PASSED               [ 10%]
+tests/test_demo_directory_adapter.py::test_location_outside_bogota_returns_no_leads PASSED [ 11%]
+tests/test_demo_directory_adapter.py::test_restaurantes_follows_pagination_and_parses_both_pages PASSED [ 12%]
+tests/test_demo_directory_adapter.py::test_contadores_pagination PASSED  [ 14%]
+tests/test_demo_directory_adapter.py::test_js_rendered_listing_yields_leads_with_playwright PASSED [ 15%]
+tests/test_demo_directory_adapter.py::test_visits_the_business_site_to_find_its_email PASSED [ 17%]
+tests/test_demo_directory_adapter.py::test_business_without_a_website_has_no_email PASSED [ 18%]
+tests/test_demo_directory_adapter.py::test_business_with_a_website_but_no_email_on_the_contact_page PASSED [ 20%]
+tests/test_demo_directory_adapter.py::test_searching_all_categories_when_keyword_does_not_map_to_one PASSED [ 21%]
+tests/test_email_validation.py::test_has_valid_syntax PASSED             [ 22%]
+tests/test_email_validation.py::test_invalid_syntax_is_false_without_any_dns_lookup PASSED [ 24%]
+tests/test_email_validation.py::test_valid_domain_with_mx_record_is_true PASSED [ 25%]
+tests/test_email_validation.py::test_domain_without_mx_record_is_false PASSED [ 27%]
+tests/test_email_validation.py::test_dns_unavailable_returns_none_not_false PASSED [ 28%]
+tests/test_email_validation.py::test_result_is_cached_per_domain PASSED  [ 30%]
+tests/test_email_validation.py::test_default_resolver_timeout_surfaces_as_none PASSED [ 31%]
+tests/test_email_validation.py::test_default_resolver_nxdomain_surfaces_as_false PASSED [ 32%]
+tests/test_excel_export.py::test_write_leads_excel_produces_the_three_sheets PASSED [ 34%]
+tests/test_excel_export.py::test_leads_sheet_has_bold_headers_filter_and_links PASSED [ 35%]
+tests/test_excel_export.py::test_leads_sheet_has_a_conditional_color_scale_on_the_score_column PASSED [ 37%]
+tests/test_excel_export.py::test_resumen_sheet_has_category_and_score_range_totals PASSED [ 38%]
+tests/test_excel_export.py::test_fuentes_sheet_has_the_source_row PASSED [ 40%]
+tests/test_fetching.py::test_fetches_an_allowed_url PASSED               [ 41%]
+tests/test_fetching.py::test_sends_an_identifiable_user_agent PASSED     [ 42%]
+tests/test_fetching.py::test_respects_robots_disallow PASSED             [ 44%]
+tests/test_fetching.py::test_missing_robots_txt_allows_fetching PASSED   [ 45%]
+tests/test_fetching.py::test_retries_on_429_then_succeeds PASSED         [ 47%]
+tests/test_fetching.py::test_retries_on_5xx_then_gives_up_after_max_attempts PASSED [ 48%]
+tests/test_fetching.py::test_rate_limits_requests_to_the_same_domain PASSED [ 50%]
+tests/test_google_places.py::test_google_places_returns_empty_when_no_api_key PASSED [ 51%]
+tests/test_google_places.py::test_google_places_success PASSED           [ 52%]
+tests/test_health.py::test_health_ok PASSED                              [ 54%]
+tests/test_health.py::test_health_dependency_failure PASSED              [ 55%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[(601) 234-5678-+576012345678] PASSED [ 57%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[301-234-5679-+573012345679] PASSED [ 58%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[+57 300 234 5680-+573002345680] PASSED [ 60%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[3012345678-+573012345678] PASSED [ 61%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[601 234 5678-+576012345678] PASSED [ 62%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[+573002345680-+573002345680] PASSED [ 64%]
+tests/test_normalization.py::test_normalize_phone_colombian_formats[3012345678 ext. 102-+573012345678] PASSED [ 65%]
+tests/test_normalization.py::test_normalize_phone_old_landline_format_is_now_upgraded PASSED [ 67%]
+tests/test_normalization.py::test_normalize_phone_invalid_or_missing_returns_none[None] PASSED [ 68%]
+tests/test_normalization.py::test_normalize_phone_invalid_or_missing_returns_none[] PASSED [ 70%]
+tests/test_normalization.py::test_normalize_phone_invalid_or_missing_returns_none[abc] PASSED [ 71%]
+tests/test_normalization.py::test_normalize_phone_invalid_or_missing_returns_none[123] PASSED [ 72%]
+tests/test_normalization.py::test_normalize_name[Contadores Ruiz SAS-contadores ruiz] PASSED [ 74%]
+tests/test_normalization.py::test_normalize_name[Contadores Ruiz S.A.S.-contadores ruiz] PASSED [ 75%]
+tests/test_normalization.py::test_normalize_name[Restaurante Do\xf1a Rosa-restaurante dona rosa] PASSED [ 77%]
+tests/test_normalization.py::test_normalize_name[Cl\xednica Dental Avanzada Ltda.-clinica dental avanzada] PASSED [ 78%]
+tests/test_normalization.py::test_normalize_name[Cl\xednica Dental Avanzada LTDA-clinica dental avanzada] PASSED [ 80%]
+tests/test_normalization.py::test_normalize_name[  M\xfaltiples   Espacios  -multiples espacios] PASSED [ 81%]
+tests/test_normalization.py::test_normalize_email PASSED                 [ 82%]
+tests/test_normalization.py::test_normalize_website[https://www.Empresa.com/-empresa.com] PASSED [ 84%]
+tests/test_normalization.py::test_normalize_website[http://empresa.com-empresa.com] PASSED [ 85%]
+tests/test_normalization.py::test_normalize_website[empresa.com/-empresa.com] PASSED [ 87%]
+tests/test_normalization.py::test_normalize_website[None-None] PASSED    [ 88%]
+tests/test_normalization.py::test_normalize_website[-None] PASSED        [ 90%]
+tests/test_scoring.py::test_full_lead_scores_100 PASSED                  [ 91%]
+tests/test_scoring.py::test_empty_lead_scores_0 PASSED                   [ 92%]
+tests/test_scoring.py::test_email_present_but_invalid_does_not_score_email_points PASSED [ 94%]
+tests/test_scoring.py::test_email_present_but_unvalidated_does_not_score_email_points PASSED [ 95%]
+tests/test_scoring.py::test_phone_and_website_only PASSED                [ 97%]
+tests/test_scoring.py::test_address_without_geolocation_does_not_score PASSED [ 98%]
+tests/test_scoring.py::test_category_without_rating_does_not_score PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\lead-generator\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 70 passed, 2 deselected, 1 warning in 6.44s =================

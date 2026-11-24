@@ -1,0 +1,40 @@
+﻿npm run automation:test
+
+> playwright-ts-parabank@1.0.0 automation:test
+> npx ts-node automation/test-validation-retry.ts
+
+====================================================
+Running Automation Unit Tests (Validation & Retry Logic)
+====================================================
+
+--- 1. Validation Logic Tests ---
+  [PASS] Valid invoice record passes validation
+  [PASS] Record missing invoice_id is rejected
+  [PASS] Record missing issuer_name (payee) is rejected
+  [PASS] Record with missing address field (city) is rejected
+  [PASS] Record with negative amount is rejected
+  [PASS] Record with zero amount is rejected
+  [PASS] Record 4 in sample-records.json is rejected as expected
+
+--- 2. Transient Error Detection Tests ---
+  [PASS] isTransientError identifies timeouts and network drops
+
+--- 3. Retry Logic & Exponential Backoff Tests ---
+  [PASS] Operation succeeding on first attempt requires 1 attempt
+  [PASS] Transient failure retries and succeeds on attempt 2 with increasing backoff
+  [PASS] Transient failure retrying until maxRetries exhausted throws error
+  [PASS] Non-transient error fails immediately on attempt 1 without retrying
+
+--- 4. Idempotency State Management Tests ---
+  [PASS] StateManager marks verified records as completed and prevents duplicate runs
+
+--- 5. Verification Logic Tests ---
+  [PASS] verifyConfirmationText verifies matching text
+  [PASS] verifyConfirmationText rejects mismatched payee name
+  [PASS] verifyConfirmationText rejects mismatched amount
+
+====================================================
+Test Results: 16 passed, 0 failed
+====================================================
+
+

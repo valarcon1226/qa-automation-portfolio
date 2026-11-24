@@ -1,0 +1,130 @@
+# Command: .venv\Scripts\python.exe -m pytest -v -m "not integration" && load_generator.py + /metrics + webhook_sink /alerts
+
+=== Load Generator Summary ===
+{
+  "items_success": 20,
+  "items_failed": 0,
+  "process_success": 5,
+  "process_failed": 0,
+  "total_rows_processed": 500,
+  "errors_triggered": 3,
+  "slow_triggered": 1
+}
+
+=== Live Prometheus Metrics (/metrics) ===
+http_requests_total{endpoint="/health",method="GET",status="200"} 1.0
+http_requests_total{endpoint="/api/items",method="GET",status="200"} 20.0
+http_requests_total{endpoint="/api/process",method="POST",status="200"} 5.0
+http_requests_total{endpoint="/api/error",method="GET",status="500"} 3.0
+http_requests_total{endpoint="/api/slow",method="GET",status="200"} 1.0
+http_request_duration_seconds_count{endpoint="/health",method="GET"} 1.0
+http_request_duration_seconds_sum{endpoint="/health",method="GET"} 0.0008306000381708145
+http_request_duration_seconds_count{endpoint="/api/items",method="GET"} 20.0
+http_request_duration_seconds_sum{endpoint="/api/items",method="GET"} 0.01351080002496019
+http_request_duration_seconds_count{endpoint="/api/process",method="POST"} 5.0
+http_request_duration_seconds_sum{endpoint="/api/process",method="POST"} 0.02002960001118481
+http_request_duration_seconds_count{endpoint="/api/error",method="GET"} 3.0
+http_request_duration_seconds_sum{endpoint="/api/error",method="GET"} 0.001846599974669516
+http_request_duration_seconds_count{endpoint="/api/slow",method="GET"} 1.0
+http_request_duration_seconds_sum{endpoint="/api/slow",method="GET"} 0.06063780002295971
+business_processed_rows_total{pipeline="sales_pipeline",status="success"} 200.0
+business_processed_rows_total{pipeline="inventory_etl",status="success"} 200.0
+business_processed_rows_total{pipeline="financial_enricher",status="success"} 100.0
+business_active_users 42.0
+business_operations_total{operation_type="query_items"} 20.0
+business_operations_total{operation_type="batch_processing"} 5.0
+business_operations_total{operation_type="slow_simulation"} 1.0
+
+=== Webhook Sink Response ===
+{
+  "status": "received",
+  "alerts_recorded": 1,
+  "latest_alerts": [
+    "HighErrorRate5xx",
+    "ServiceDown"
+  ]
+}
+
+=== Stored Alerts (GET /alerts) ===
+{
+  "count": 1,
+  "alerts": [
+    {
+      "receiver": "webhook-sink",
+      "status": "firing",
+      "alerts": [
+        {
+          "status": "firing",
+          "labels": {
+            "alertname": "HighErrorRate5xx",
+            "severity": "critical",
+            "job": "demo-app"
+          },
+          "annotations": {
+            "summary": "High API Error Rate (5xx)",
+            "description": "HTTP 5xx error rate is above 5% in the last 1 minute."
+          }
+        },
+        {
+          "status": "firing",
+          "labels": {
+            "alertname": "ServiceDown",
+            "severity": "critical",
+            "job": "demo-app"
+          },
+          "annotations": {
+            "summary": "Demo App is down",
+            "description": "Target demo-app has been unreachable for more than 10 seconds."
+          }
+        }
+      ]
+    }
+  ]
+}
+
+=== Structured Log Lines (Promtail/Loki input) ===
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Demo app started successfully. Active users gauge initialized to 42.
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/health status=200 duration=0.0008s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/api/items status=200 duration=0.0010s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/api/items status=200 duration=0.0006s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/api/items status=200 duration=0.0006s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/api/items status=200 duration=0.0007s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/api/items status=200 duration=0.0009s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Request finished method=GET path=/api/items status=200 duration=0.0006s
+2026-11-22T12:08:31-0500 [INFO] [app=demo-app] Retrieved 3 sample items
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\monitoring-dashboard\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\monitoring-dashboard
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, cov-6.0.0, timeout-2.3.1
+collecting ... collected 19 items / 6 deselected / 13 selected
+
+tests/test_demo_app.py::test_health_endpoint PASSED                      [  7%]
+tests/test_demo_app.py::test_items_endpoint PASSED                       [ 15%]
+tests/test_demo_app.py::test_process_rows_endpoint PASSED                [ 23%]
+tests/test_demo_app.py::test_process_rows_validation PASSED              [ 30%]
+tests/test_demo_app.py::test_error_endpoint PASSED                       [ 38%]
+tests/test_demo_app.py::test_slow_endpoint PASSED                        [ 46%]
+tests/test_load_generator.py::test_run_load_with_test_transport PASSED   [ 53%]
+tests/test_metrics.py::test_metrics_endpoint_status PASSED               [ 61%]
+tests/test_metrics.py::test_metrics_contain_required_series PASSED       [ 69%]
+tests/test_metrics.py::test_metrics_increment_on_operations PASSED       [ 76%]
+tests/test_webhook_sink.py::test_webhook_sink_health PASSED              [ 84%]
+tests/test_webhook_sink.py::test_webhook_sink_receive_and_list_alert PASSED [ 92%]
+tests/test_webhook_sink.py::test_webhook_sink_clear PASSED               [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:37
+  C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\monitoring-dashboard\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 13 passed, 6 deselected, 1 warning in 1.18s =================

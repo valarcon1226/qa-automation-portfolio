@@ -1,0 +1,89 @@
+{
+  "health": {
+    "status": "healthy",
+    "service": "ci-cd-pipeline-api",
+    "version": "1.0.0",
+    "database": "connected"
+  },
+  "created": [
+    {
+      "service_name": "order-service",
+      "environment": "production",
+      "version": "v1.2.0",
+      "status": "successful",
+      "deployed_by": "pipeline-bot",
+      "description": "Initial production release",
+      "id": 1,
+      "created_at": "2026-11-22T17:08:47.846295",
+      "updated_at": "2026-11-22T17:08:47.846295"
+    },
+    {
+      "service_name": "billing-api",
+      "environment": "staging",
+      "version": "v2.1.0-rc1",
+      "status": "successful",
+      "deployed_by": "release-manager",
+      "description": "Tax calculation patch",
+      "id": 2,
+      "created_at": "2026-11-22T17:08:47.905234",
+      "updated_at": "2026-11-22T17:08:47.905234"
+    },
+    {
+      "service_name": "checkout-worker",
+      "environment": "production",
+      "version": "v1.4.2",
+      "status": "failed",
+      "deployed_by": "pipeline-bot",
+      "description": "Smoke check timeout during rollout",
+      "id": 3,
+      "created_at": "2026-11-22T17:08:51.137536",
+      "updated_at": "2026-11-22T17:08:51.137536"
+    }
+  ],
+  "rolled_back": {
+    "service_name": "checkout-worker",
+    "environment": "production",
+    "version": "v1.4.2",
+    "status": "rolled_back",
+    "deployed_by": "pipeline-bot",
+    "description": "Manual rollback to v1.4.1 completed",
+    "id": 3,
+    "created_at": "2026-11-22T17:08:51.137536",
+    "updated_at": "2026-11-22T17:08:51.297138"
+  },
+  "deployments": [
+    {
+      "service_name": "checkout-worker",
+      "environment": "production",
+      "version": "v1.4.2",
+      "status": "rolled_back",
+      "deployed_by": "pipeline-bot",
+      "description": "Manual rollback to v1.4.1 completed",
+      "id": 3,
+      "created_at": "2026-11-22T17:08:51.137536",
+      "updated_at": "2026-11-22T17:08:51.297138"
+    },
+    {
+      "service_name": "billing-api",
+      "environment": "staging",
+      "version": "v2.1.0-rc1",
+      "status": "successful",
+      "deployed_by": "release-manager",
+      "description": "Tax calculation patch",
+      "id": 2,
+      "created_at": "2026-11-22T17:08:47.905234",
+      "updated_at": "2026-11-22T17:08:47.905234"
+    },
+    {
+      "service_name": "order-service",
+      "environment": "production",
+      "version": "v1.2.0",
+      "status": "successful",
+      "deployed_by": "pipeline-bot",
+      "description": "Initial production release",
+      "id": 1,
+      "created_at": "2026-11-22T17:08:47.846295",
+      "updated_at": "2026-11-22T17:08:47.846295"
+    }
+  ]
+}

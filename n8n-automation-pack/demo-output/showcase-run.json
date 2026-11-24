@@ -1,0 +1,92 @@
+{
+  "invoices": [
+    {
+      "file": "factura-valida.pdf",
+      "raw_text": "FACTURA DE VENTA\nProveedor: Distribuidora La Sabana SAS\nNIT: 900123456-7\nFecha: 2026-09-30\nItems:\n- Tomate chonto x 20 = 60000\n- Cebolla cabezona x 15 = 45000\n- Papa criolla x 30 = 90000\nSubtotal: 195000\nIVA: 37050\nTotal: 232050",
+      "extracted": {
+        "proveedor": "Distribuidora La Sabana SAS",
+        "nit": "900123456-7",
+        "fecha": "2026-09-30",
+        "subtotal": 195000,
+        "iva": 37050,
+        "total": 232050,
+        "items": [
+          {
+            "nombre": "Tomate chonto",
+            "cantidad": 20,
+            "precio": 60000
+          },
+          {
+            "nombre": "Cebolla cabezona",
+            "cantidad": 15,
+            "precio": 45000
+          },
+          {
+            "nombre": "Papa criolla",
+            "cantidad": 30,
+            "precio": 90000
+          }
+        ]
+      },
+      "status": "validated",
+      "errors": []
+    },
+    {
+      "file": "factura-totales-no-cuadran.pdf",
+      "raw_text": "FACTURA DE VENTA\nProveedor: Carnes El Novillo Ltda\nNIT: 800456789-2\nFecha: 2026-09-28\nItems:\n- Carne de res x 25 = 375000\n- Pollo entero x 10 = 90000\nSubtotal: 465000\nIVA: 88350\nTotal: 999999",
+      "extracted": {
+        "proveedor": "Carnes El Novillo Ltda",
+        "nit": "800456789-2",
+        "fecha": "2026-09-28",
+        "subtotal": 465000,
+        "iva": 88350,
+        "total": 999999,
+        "items": [
+          {
+            "nombre": "Carne de res",
+            "cantidad": 25,
+            "precio": 375000
+          },
+          {
+            "nombre": "Pollo entero",
+            "cantidad": 10,
+            "precio": 90000
+          }
+        ]
+      },
+      "status": "needs_review",
+      "errors": [
+        "total does not match subtotal + iva"
+      ]
+    },
+    {
+      "file": "factura-fecha-invalida.pdf",
+      "raw_text": "FACTURA DE VENTA\nProveedor: Verduras Frescas del Valle\nNIT: 700987654-1\nFecha: 2026-13-45\nItems:\n- Lechuga x 12 = 24000\n- Zanahoria x 18 = 27000\nSubtotal: 51000\nIVA: 9690\nTotal: 60690",
+      "extracted": {
+        "proveedor": "Verduras Frescas del Valle",
+        "nit": "700987654-1",
+        "fecha": "2026-13-45",
+        "subtotal": 51000,
+        "iva": 9690,
+        "total": 60690,
+        "items": [
+          {
+            "nombre": "Lechuga",
+            "cantidad": 12,
+            "precio": 24000
+          },
+          {
+            "nombre": "Zanahoria",
+            "cantidad": 18,
+            "precio": 27000
+          }
+        ]
+      },
+      "status": "needs_review",
+      "errors": [
+        "fecha is invalid"
+      ]
+    }
+  ],
+  "daily_report_summary": "Resumen de ventas de Sabor de Casa del 2025-01-15: se vendieron 14 unidades de Bandeja Paisa ($476000 COP); 9 unidades de Ajiaco Santafereño ($261000 COP); 6 unidades de Sancocho de Gallina ($162000 COP); 20 unidades de Limonada de Coco ($180000 COP). Total del día: $1079000 COP. ¡Buen trabajo, equipo!"
+}

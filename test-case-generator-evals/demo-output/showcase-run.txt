@@ -1,0 +1,27 @@
+﻿.venv\Scripts\python.exe -m app.generate evals/golden/REQ-09-seguimiento.json --model llama3.2:1b --timeout 45
+{
+  "requirement_id": "REQ-09",
+  "requirement_title": "Seguimiento y trazabilidad de pedidos",
+  "valid_on_first_try": true,
+  "retries_used": 0,
+  "test_cases": [
+    {
+      "id": "TC-01",
+      "title": "Real-time monitoring of shipment",
+      "level": "smoke",
+      "preconditions": "The system is up and running",
+      "steps": [
+        "The system displays the shipment status in real-time (preparation, sent, and delivered)",
+        "The system displays the tracking number with a link to the courier's tracking page when the order is sent",
+        "The customer can only cancel the order while it is in the preparation state"
+      ],
+      "expected": "The shipment status should be displayed in real-time (preparation, sent, and delivered)",
+      "covers": [
+        "AC-01",
+        "AC-02",
+        "AC-03"
+      ]
+    }
+  ]
+}
+

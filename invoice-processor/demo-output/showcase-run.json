@@ -1,0 +1,438 @@
+﻿{
+  "sample_extractions": [
+    {
+      "file": "evals/data/inv_01.pdf",
+      "doc_type": "INVOICE",
+      "pages": 1,
+      "raw_text_preview": "SYNTHETIC TEST DOCUMENT - NO LEGAL OR FISCAL VALIDITY\nDOCUMENTO FICTICIO PARA EVALUACION DE AUTOMATIZACION\nANDINA TECNOLOGICA S.A.S.\nNIT/VAT: 900.123.456-8\nDirección: Avenida Principal # 10-20\nFACTURA ELECTRONICA DE VENTA\nFactura No: FEV-101\nFecha de Emisión: 2026-10-01\nServicios Profesionales de Consultoria | 1 | 1000 | 1000\nSubtotal: $ 2,000,000.00\nIVA: $ 380,000.00\nTotal a Pagar: $ 2,380,000.00",
+      "extracted": {
+        "invoice_id": "920c7e8a-c5ea-44ac-a2e0-d6a073fb6f47",
+        "original_filename": "",
+        "minio_key": "",
+        "issuer_name": "ANDINA TECNOLOGICA S.A.S.",
+        "issuer_vat": "900.123.456-8",
+        "recipient_name": null,
+        "recipient_vat": null,
+        "invoice_number": "FEV-101",
+        "invoice_date": "2026-10-01",
+        "due_date": null,
+        "subtotal": "2000000.00",
+        "tax_rate": null,
+        "tax_amount": "380000.00",
+        "total": "2380000.00",
+        "currency": "COP",
+        "is_valid": true,
+        "validation_errors": [],
+        "status": "COMPLETED",
+        "created_at": "2026-11-22T17:04:45.338634Z",
+        "line_items": [
+          {
+            "item_id": null,
+            "description": "Servicios Profesionales de Consultoria",
+            "quantity": "1",
+            "unit_price": "1000",
+            "line_total": "1000"
+          }
+        ],
+        "field_sources": {
+          "invoice_number": {
+            "page": 1,
+            "text_snippet": "Factura No: FEV-101"
+          },
+          "issuer_vat": {
+            "page": 1,
+            "text_snippet": "NIT/VAT: 900.123.456-8"
+          },
+          "issuer_name": {
+            "page": 1,
+            "text_snippet": "ANDINA TECNOLOGICA S.A.S."
+          },
+          "invoice_date": {
+            "page": 1,
+            "text_snippet": "Fecha de Emisión: 2026-10-01"
+          },
+          "subtotal": {
+            "page": 1,
+            "text_snippet": "Servicios Profesionales de Consultoria | 1 | 1000 | 1000 Subtotal: $ 2,000,000.00"
+          },
+          "tax_amount": {
+            "page": 1,
+            "text_snippet": "Subtotal: $ 2,000,000.00 IVA: $ 380,000.00"
+          },
+          "total": {
+            "page": 1,
+            "text_snippet": "IVA: $ 380,000.00 Total a Pagar: $ 2,380,000.00"
+          },
+          "recipient_name": {
+            "page": null,
+            "text_snippet": null
+          },
+          "recipient_vat": {
+            "page": null,
+            "text_snippet": null
+          },
+          "due_date": {
+            "page": null,
+            "text_snippet": null
+          },
+          "tax_rate": {
+            "page": null,
+            "text_snippet": null
+          },
+          "currency": {
+            "page": null,
+            "text_snippet": null
+          }
+        },
+        "document_type": "INVOICE"
+      }
+    },
+    {
+      "file": "evals/data/inv_05.xlsx",
+      "doc_type": "INVOICE",
+      "pages": 1,
+      "raw_text_preview": "SUMINISTROS INDUSTRIALES SAS\nNIT:   900.555.666-1\nFactura No:   FEV-105\nFecha de Emisión:   2026-10-05\nDescripción   Cantidad   Precio Unitario   Total\nServicios Especializados   1   800000.0   800000.0\nSubtotal:   $ 800,000.00\nIVA:   $ 152,000.00\nTotal a Pagar:   $ 952,000.00",
+      "extracted": {
+        "invoice_id": "e41dde29-7ccb-4e37-9e15-c90111035285",
+        "original_filename": "",
+        "minio_key": "",
+        "issuer_name": "SUMINISTROS INDUSTRIALES SAS",
+        "issuer_vat": "900.555.666-1",
+        "recipient_name": null,
+        "recipient_vat": null,
+        "invoice_number": "FEV-105",
+        "invoice_date": "2026-10-05",
+        "due_date": null,
+        "subtotal": "800000.00",
+        "tax_rate": null,
+        "tax_amount": "152000.00",
+        "total": "952000.00",
+        "currency": "COP",
+        "is_valid": true,
+        "validation_errors": [],
+        "status": "COMPLETED",
+        "created_at": "2026-11-22T17:04:45.351313Z",
+        "line_items": [
+          {
+            "item_id": null,
+            "description": "Servicios Especializados",
+            "quantity": "1",
+            "unit_price": "800000.0",
+            "line_total": "800000.0"
+          }
+        ],
+        "field_sources": {
+          "invoice_number": {
+            "page": 1,
+            "text_snippet": "Factura No:   FEV-105"
+          },
+          "issuer_vat": {
+            "page": 1,
+            "text_snippet": "NIT:   900.555.666-1"
+          },
+          "issuer_name": {
+            "page": 1,
+            "text_snippet": "SUMINISTROS INDUSTRIALES SAS"
+          },
+          "invoice_date": {
+            "page": 1,
+            "text_snippet": "Fecha de Emisión:   2026-10-05"
+          },
+          "subtotal": {
+            "page": 1,
+            "text_snippet": "Servicios Especializados   1   800000.0   800000.0 Subtotal:   $ 800,000.00"
+          },
+          "tax_amount": {
+            "page": 1,
+            "text_snippet": "Subtotal:   $ 800,000.00 IVA:   $ 152,000.00"
+          },
+          "total": {
+            "page": 1,
+            "text_snippet": "IVA:   $ 152,000.00 Total a Pagar:   $ 952,000.00"
+          },
+          "recipient_name": {
+            "page": null,
+            "text_snippet": null
+          },
+          "recipient_vat": {
+            "page": null,
+            "text_snippet": null
+          },
+          "due_date": {
+            "page": null,
+            "text_snippet": null
+          },
+          "tax_rate": {
+            "page": null,
+            "text_snippet": null
+          },
+          "currency": {
+            "page": null,
+            "text_snippet": null
+          }
+        },
+        "document_type": "INVOICE"
+      }
+    },
+    {
+      "file": "evals/data/acord_01.pdf",
+      "doc_type": "ACORD_25",
+      "pages": 1,
+      "raw_text_preview": "SYNTHETIC TEST DOCUMENT - NO LEGAL OR FISCAL VALIDITY\nDOCUMENTO FICTICIO PARA EVALUACION DE AUTOMATIZACION\nACORD 25 (2016/03)\nCERTIFICATE OF LIABILITY INSURANCE\nTHIS CERTIFICATE DOES NOT AFFIRMATIVELY OR NEGATIVELY AMEND COVERAGE.\nPRODUCER: PREMIER BROKERAGE PARTNERS LLC\nINSURED: ANDES LOGISTICS GROUP LLC\n100 Corporate Parkway, Suite 500\nINSURER A : TRAVELERS CASUALTY AND SURETY COMPANY\nINSURER B : ALLIED WORLD ASSURANCE\nCOVERAGES: COMMERCIAL GENERAL LIABILITY\nPOLICY NUMBER: GL-98765432-01\nPOLICY EFF (MM/DD/YYYY): 2026-01-01\nPOLICY EXP (MM/DD/YYYY): 2027-01-01\nLIMITS\nEACH OCCURRENCE $ 1,000,000\nDAMAGE TO RENTED PREMISES $ 100,000\nMED EXP (Any one person) $ 10,000\nPERSONAL & ADV INJURY $ 1,000,000\nGENERAL AGGREGATE $ 2,000,000\nPRODUCTS - COMP/OP AGG $ 2,000,000",
+      "extracted": {
+        "insured_name": "ANDES LOGISTICS GROUP LLC",
+        "insurer_name": "TRAVELERS CASUALTY AND SURETY COMPANY",
+        "policy_number": "GL-98765432-01",
+        "effective_date": "2026-01-01",
+        "expiration_date": "2027-01-01",
+        "coverage_limits": [
+          {
+            "coverage_type": "EACH OCCURRENCE",
+            "limit_amount": "1000000",
+            "description": null
+          },
+          {
+            "coverage_type": "DAMAGE TO RENTED PREMISES",
+            "limit_amount": "100000",
+            "description": null
+          },
+          {
+            "coverage_type": "PERSONAL & ADV INJURY",
+            "limit_amount": "1000000",
+            "description": null
+          },
+          {
+            "coverage_type": "GENERAL AGGREGATE",
+            "limit_amount": "2000000",
+            "description": null
+          },
+          {
+            "coverage_type": "PRODUCTS - COMP/OP AGG",
+            "limit_amount": "2000000",
+            "description": null
+          }
+        ],
+        "document_type": "ACORD_25",
+        "is_valid": true,
+        "validation_errors": [],
+        "field_sources": {
+          "insured_name": {
+            "page": 1,
+            "text_snippet": "INSURED: ANDES LOGISTICS GROUP LLC"
+          },
+          "insurer_name": {
+            "page": 1,
+            "text_snippet": "INSURER A : TRAVELERS CASUALTY AND SURETY COMPANY"
+          },
+          "policy_number": {
+            "page": 1,
+            "text_snippet": "POLICY NUMBER: GL-98765432-01"
+          },
+          "effective_date": {
+            "page": 1,
+            "text_snippet": "POLICY EFF (MM/DD/YYYY): 2026-01-01"
+          },
+          "expiration_date": {
+            "page": 1,
+            "text_snippet": "POLICY EXP (MM/DD/YYYY): 2027-01-01"
+          },
+          "limit_each_occurrence": {
+            "page": 1,
+            "text_snippet": "EACH OCCURRENCE $ 1,000,000"
+          },
+          "limit_damage_to_rented_premises": {
+            "page": 1,
+            "text_snippet": "DAMAGE TO RENTED PREMISES $ 100,000"
+          },
+          "limit_personal_&_adv_injury": {
+            "page": 1,
+            "text_snippet": "PERSONAL & ADV INJURY $ 1,000,000"
+          },
+          "limit_general_aggregate": {
+            "page": 1,
+            "text_snippet": "GENERAL AGGREGATE $ 2,000,000"
+          },
+          "limit_products_-_comp/op_agg": {
+            "page": 1,
+            "text_snippet": "PRODUCTS - COMP/OP AGG $ 2,000,000"
+          }
+        }
+      }
+    },
+    {
+      "file": "evals/data/acord_04.xlsx",
+      "doc_type": "ACORD_25",
+      "pages": 1,
+      "raw_text_preview": "ACORD 25 (2016/03) - CERTIFICATE OF LIABILITY INSURANCE\nINSURED:   SUMMIT INDUSTRIAL CONTRACTORS\nINSURER A:   CHUBB INDEMNITY INSURANCE CO\nPOLICY NUMBER:   GL-77665544-04\nPOLICY EFF:   2026-04-01\nPOLICY EXP:   2027-04-01\nCOVERAGE LIMITS\nEACH OCCURRENCE   $ 1,500,000\nDAMAGE TO RENTED PREMISES   $ 100,000\nGENERAL AGGREGATE   $ 3,000,000",
+      "extracted": {
+        "insured_name": "SUMMIT INDUSTRIAL CONTRACTORS",
+        "insurer_name": "CHUBB INDEMNITY INSURANCE CO",
+        "policy_number": "GL-77665544-04",
+        "effective_date": "2026-04-01",
+        "expiration_date": "2027-04-01",
+        "coverage_limits": [
+          {
+            "coverage_type": "EACH OCCURRENCE",
+            "limit_amount": "1500000",
+            "description": null
+          },
+          {
+            "coverage_type": "DAMAGE TO RENTED PREMISES",
+            "limit_amount": "100000",
+            "description": null
+          },
+          {
+            "coverage_type": "GENERAL AGGREGATE",
+            "limit_amount": "3000000",
+            "description": null
+          }
+        ],
+        "document_type": "ACORD_25",
+        "is_valid": true,
+        "validation_errors": [],
+        "field_sources": {
+          "insured_name": {
+            "page": 1,
+            "text_snippet": "INSURED:   SUMMIT INDUSTRIAL CONTRACTORS"
+          },
+          "insurer_name": {
+            "page": 1,
+            "text_snippet": "INSURER A:   CHUBB INDEMNITY INSURANCE CO"
+          },
+          "policy_number": {
+            "page": 1,
+            "text_snippet": "POLICY NUMBER:   GL-77665544-04"
+          },
+          "effective_date": {
+            "page": 1,
+            "text_snippet": "POLICY EFF:   2026-04-01"
+          },
+          "expiration_date": {
+            "page": 1,
+            "text_snippet": "POLICY EXP:   2027-04-01"
+          },
+          "limit_each_occurrence": {
+            "page": 1,
+            "text_snippet": "EACH OCCURRENCE   $ 1,500,000"
+          },
+          "limit_damage_to_rented_premises": {
+            "page": 1,
+            "text_snippet": "DAMAGE TO RENTED PREMISES   $ 100,000"
+          },
+          "limit_general_aggregate": {
+            "page": 1,
+            "text_snippet": "GENERAL AGGREGATE   $ 3,000,000"
+          }
+        }
+      }
+    }
+  ],
+  "benchmark_40_docs": {
+    "evaluation_timestamp": "2026-11-19 19:28:47 UTC",
+    "total_documents": 40,
+    "llm_configuration": {
+      "base_url": "http://localhost:11434/v1",
+      "model": "qwen3:4b-instruct-2507-q4_K_M",
+      "connected": true,
+      "status": "COMPLETED",
+      "notes": "LLM was accessible and executed"
+    },
+    "llm_calls": {
+      "attempted": 40,
+      "failed": [
+        {
+          "doc_id": "inv_14",
+          "error": "LLM output failed validation for InvoiceResponse after 2 attempts: 1 validation error for InvoiceResponse\ninvoice_id\n  Input should be a valid UUID, invalid length: expected length 32 for simple forma"
+        }
+      ]
+    },
+    "invoice_metrics": {
+      "issuer_name": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "issuer_vat": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "invoice_number": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "invoice_date": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "subtotal": {
+        "samples": 20,
+        "regex_correct": 18,
+        "regex_accuracy": "90.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "tax_amount": {
+        "samples": 20,
+        "regex_correct": 18,
+        "regex_accuracy": "90.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "total": {
+        "samples": 20,
+        "regex_correct": 18,
+        "regex_accuracy": "90.0%",
+        "llm_accuracy": "95.0%"
+      },
+      "currency": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "20.0%"
+      }
+    },
+    "acord25_metrics": {
+      "insured_name": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "100.0%"
+      },
+      "insurer_name": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "100.0%"
+      },
+      "policy_number": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "100.0%"
+      },
+      "effective_date": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "100.0%"
+      },
+      "expiration_date": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "100.0%"
+      },
+      "coverage_limits": {
+        "samples": 20,
+        "regex_correct": 20,
+        "regex_accuracy": "100.0%",
+        "llm_accuracy": "100.0%"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+﻿.venv\Scripts\python.exe -c '<DemoDirectoryAdapter + normalize + rapidfuzz dedup + score + Excel>'
+Raw scraped: 27 | Duplicates merged: 3 | Unique leads kept: 24
+Top 12 scored leads:
+{"company_name": "Restaurante El Buen Sabor", "category": "restaurantes", "phone_e164": "+576012345678", "email": "contacto@elbuensabor.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Restaurante Doña Rosa", "category": "restaurantes", "phone_e164": "+573012345679", "email": "info@donarosa.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Pastelería y Cafetería Dulce Hogar", "category": "restaurantes", "phone_e164": "+573002345680", "email": "ventas@dulcehogar.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Restaurante Sabor Costeño", "category": "restaurantes", "phone_e164": "+573178889900", "email": "hola@saborcosteno.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Restaurante Parrilla Los Amigos", "category": "restaurantes", "phone_e164": "+576015678901", "email": "contacto@parrillalosamigos.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Contadores Ruiz SAS", "category": "contadores", "phone_e164": "+576017890123", "email": "info@contadoresruiz.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Asesorías Contables del Norte", "category": "contadores", "phone_e164": "+573134567890", "email": "contacto@acnorte.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Firma Contable Andina", "category": "contadores", "phone_e164": "+576016789012", "email": "info@contableandina.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Servicios Tributarios Bogotá", "category": "contadores", "phone_e164": "+573187788990", "email": "info@tributariosbogota.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Asesoría Fiscal y Contable Sur", "category": "contadores", "phone_e164": "+573145566778", "email": "contacto@fiscalsur.com.co", "lead_score": 70, "city": "Bogotá"}
+{"company_name": "Restaurante La Fonda Antioqueña", "category": "restaurantes", "phone_e164": "+573156789012", "email": null, "lead_score": 40, "city": "Bogotá"}
+{"company_name": "Auditores y Contadores Prieto", "category": "contadores", "phone_e164": "+573192233445", "email": null, "lead_score": 40, "city": "Bogotá"}
+Merged duplicates:
+{"kept": "Restaurante El Buen Sabor", "merged": "Restaurante El Buen Sabor SAS", "similarity": 100.0}
+{"kept": "Restaurante Doña Rosa", "merged": "Restaurante Doña Rosa S.A.S", "similarity": 100.0}
+{"kept": "Contadores Ruiz SAS", "merged": "Contadores Ruiz S.A.S.", "similarity": 100.0}

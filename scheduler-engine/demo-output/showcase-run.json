@@ -1,0 +1,122 @@
+﻿python.exe : C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio 
+Gemini\Potrafolio-Automation\scheduler-engine\.venv\Lib\site-packages\fastapi\testclient.py:1: 
+StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+At line:182 char:10
++ $out06 = & .\.venv\Scripts\python.exe $tmp6 2>&1 | Out-String
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\valent...ttpx2` instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  from starlette.testclient import TestClient as TestClient  # noqa
+{
+  "tasks": [
+    {
+      "task_id": "bed1c8ed-918a-499b-aa54-ba7ce364381a",
+      "name": "Sync External ERP",
+      "task_type": "PYTHON",
+      "schedule": "*/15 * * * *",
+      "is_active": true,
+      "last_run_at": null,
+      "consecutive_failures": 2,
+      "created_at": "2026-11-22T17:06:38.988658",
+      "depends_on": []
+    },
+    {
+      "task_id": "5456492f-65fb-4e68-8f06-457ebe251381",
+      "name": "Send Executive Digest",
+      "task_type": "PYTHON",
+      "schedule": "5 2 * * *",
+      "is_active": true,
+      "last_run_at": "2026-11-22T17:06:39.245174",
+      "consecutive_failures": 0,
+      "created_at": "2026-11-22T17:06:38.974326",
+      "depends_on": [
+        "8350e491-e084-4890-882f-8759d422a542"
+      ]
+    },
+    {
+      "task_id": "8350e491-e084-4890-882f-8759d422a542",
+      "name": "Extract Daily Orders",
+      "task_type": "PYTHON",
+      "schedule": "0 2 * * *",
+      "is_active": true,
+      "last_run_at": "2026-11-22T17:06:39.035345",
+      "consecutive_failures": 0,
+      "created_at": "2026-11-22T17:06:38.917387",
+      "depends_on": []
+    }
+  ],
+  "executions": {
+    "dependent_before_parent": {
+      "status": "SKIPPED",
+      "reason": "Skipped: dependency task 8350e491-e084-4890-882f-8759d422a542 status was 'NO_RUNS' (expected SUCCESS)."
+    },
+    "parent_task": {
+      "status": "SUCCESS",
+      "run_id": "56079c6f-5a8c-41a0-994d-c4e30e172e51"
+    },
+    "dependent_after_parent": {
+      "status": "SUCCESS",
+      "run_id": "ab1efa5f-9829-4519-898c-9b4d33e7740c"
+    },
+    "failing_task_3rd_failure": {
+      "status": "FAILED",
+      "run_id": "c6fd9cc8-f6a7-4ce4-ba27-6c9b6cbb96f8"
+    }
+  },
+  "alert_payload": [
+    {
+      "template_name": "slack_alert",
+      "channels": [
+        "slack"
+      ],
+      "priority": "high",
+      "recipients": {},
+      "payload": {
+        "severity": "CRITICAL",
+        "message": "Task 'Sync External ERP' (bed1c8ed-918a-499b-aa54-ba7ce364381a) failed 3 consecutive times. Error: Simulated error: task execution failed intentionally.\n",
+        "system": "scheduler-engine"
+      },
+      "event": "task_consecutive_failures",
+      "task_id": "bed1c8ed-918a-499b-aa54-ba7ce364381a",
+      "task_name": "Sync External ERP",
+      "consecutive_failures": 3,
+      "error": "Simulated error: task execution failed intentionally.\n"
+    }
+  ],
+  "run_history": [
+    {
+      "task_id": "5456492f-65fb-4e68-8f06-457ebe251381",
+      "status": "SKIPPED",
+      "exit_code": 0,
+      "duration_ms": 0,
+      "stdout": "Skipped: dependency task 8350e491-e084-4890-882f-8759d422a542 status was 'NO_RUNS' (expected SUCCESS).",
+      "stderr": ""
+    },
+    {
+      "task_id": "8350e491-e084-4890-882f-8759d422a542",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration_ms": 205,
+      "stdout": "[2026-11-22T17:06:39.233005+00:00] Demo task running with args: ['orders']\nDemo task finished successfully.",
+      "stderr": ""
+    },
+    {
+      "task_id": "5456492f-65fb-4e68-8f06-457ebe251381",
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration_ms": 143,
+      "stdout": "[2026-11-22T17:06:39.379878+00:00] Dependent task running after prerequisite succeeded!",
+      "stderr": ""
+    },
+    {
+      "task_id": "bed1c8ed-918a-499b-aa54-ba7ce364381a",
+      "status": "FAILED",
+      "exit_code": 1,
+      "duration_ms": 138,
+      "stdout": "",
+      "stderr": "Simulated error: task execution failed intentionally."
+    }
+  ]
+}
+

@@ -1,0 +1,21 @@
+﻿.venv\Scripts\python.exe -c '<PoliteFetcher + demo-store JSON-LD + MercadoLibre + update_price + webhook alert>'
+1. Keyboard Initial: {"title": "Mechanical Keyboard RGB", "price": "120.00", "currency": "USD", "availability": true}
+2. Headphones Initial: {"title": "Studio Monitor Headphones", "price": "85.00", "currency": "USD", "availability": true}
+3. MercadoLibre Sample: {"title": "Auriculares Inalámbricos Sony Wh-1000xm5 Cancelación Ruido", "price": "389999.0", "currency": "ARS", "availability": true, "seller_reputation": "City: Capital Federal", "shipping_info": "Free Shipping"}
+4. Headphones After Drop: {"title": "Studio Monitor Headphones", "price": "65.00", "currency": "USD", "availability": true}
+5. Alert Triggered: {"type": "TARGET_PRICE_MET", "old_price": "85.00", "new_price": "65.00", "status": "SENT"}
+6. Webhook Delivered: [
+  {
+    "event": "PRICE_ALERT",
+    "product_id": "c6f47d22-3f21-4e6e-a844-7a33dc321c0f",
+    "product_name": "Studio Monitor Headphones",
+    "url": "http://127.0.0.1:52671/products/headphones.html",
+    "old_price": 85.0,
+    "new_price": 65.0,
+    "target_price": 70.0,
+    "currency": "USD",
+    "alert_type": "TARGET_PRICE_MET",
+    "reason": "Price 65.00 is at or below target price of 70.00",
+    "timestamp": "2026-11-22T17:10:42.592101+00:00"
+  }
+]

@@ -1,0 +1,79 @@
+﻿python.exe : LLM request returned status 503: LLM offline - using extractive fallback
+At line:83 char:10
++ $out09 = & .\.venv\Scripts\python.exe $tmp9 2>&1 | Out-String
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (LLM request ret...active fallback:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+LLM request returned status 503: LLM offline - using extractive fallback
+LLM request returned status 503: LLM offline - using extractive fallback
+LLM request returned status 503: LLM offline - using extractive fallback
+{
+  "summary": {
+    "processed_sources": 3,
+    "total_articles": 6,
+    "new_articles": 4,
+    "duplicates_detected": 2
+  },
+  "digest": {
+    "id": "74e31b7f-a82b-410a-978e-5ef753367b0b",
+    "target_audience": "Leadership Team",
+    "recipient_email": "digest@example.com",
+    "sent_at": "2026-11-22 17:09:52.977387+00:00",
+    "status": "SUCCESS",
+    "article_count": 4,
+    "error_message": null
+  },
+  "articles": [
+    {
+      "title": "OpenAI presenta su nuevo modelo GPT-5 con razonamiento avanzado",
+      "source": "TechNews A",
+      "category": "Inteligencia Artificial",
+      "is_duplicate": false,
+      "ai_summary": "- OpenAI ha anunciado hoy oficialmente el lanzamiento de GPT-5.\n- El nuevo modelo de inteligencia artificial incorpora arquitectura de razonamiento profundo, superando evaluaciones previas en matemáticas y código.\n- La compañía informó que el despliegue se realizará de forma gradual a partir de este mes.",
+      "url": "https://technews-a.local/openai-gpt-5-announcement"
+    },
+    {
+      "title": "Kubernetes 1.32 introduce mejoras críticas en la gestión de memoria y contenedores",
+      "source": "TechNews A",
+      "category": "Cloud y DevOps",
+      "is_duplicate": false,
+      "ai_summary": "- La comunidad de Cloud Native Computing Foundation anunció el lanzamiento de Kubernetes 1.\n- 32 con optimizaciones para clusters masivos y DevOps en la nube híbrida.",
+      "url": "https://technews-a.local/kubernetes-1-32-release"
+    },
+    {
+      "title": "Llega GPT-5: OpenAI revoluciona la inteligencia artificial con nuevo motor de razonamiento",
+      "source": "DailyTech B",
+      "category": "General",
+      "is_duplicate": true,
+      "ai_summary": null,
+      "url": "https://dailytech-b.local/llega-gpt-5-openai"
+    },
+    {
+      "title": "Alerta global por nueva ola de ataques de ransomware dirigidos a servidores Linux",
+      "source": "DailyTech B",
+      "category": "Ciberseguridad",
+      "is_duplicate": false,
+      "ai_summary": "- Expertos en ciberseguridad advierten sobre una campaña masiva de phishing y malware que explota una vulnerabilidad crítica en sistemas de producción empresariales.",
+      "url": "https://dailytech-b.local/alerta-ransomware-linux"
+    },
+    {
+      "title": "OpenAI desvela GPT-5 y redefine los estándares de la computación cognitiva",
+      "source": "GlobalNews C",
+      "category": "General",
+      "is_duplicate": true,
+      "ai_summary": null,
+      "url": "https://globalnews-c.local/openai-desvela-gpt5"
+    },
+    {
+      "title": "Las acciones de gigantes tecnológicos impulsan el índice bursátil a máximos históricos",
+      "source": "GlobalNews C",
+      "category": "Fintech y Mercados",
+      "is_duplicate": false,
+      "ai_summary": "- El sector fintech y las empresas de tecnología lideran las ganancias en Wall Street tras los anuncios de nuevos productos y récord de inversión corporativa en startups de inteligencia artificial.",
+      "url": "https://globalnews-c.local/mercados-record-acciones-tech"
+    }
+  ],
+  "digest_html_length": 6558
+}
+

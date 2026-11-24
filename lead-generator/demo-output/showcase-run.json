@@ -1,0 +1,312 @@
+﻿{
+  "live_categories": [
+    "restaurantes",
+    "contadores"
+  ],
+  "raw_scraped_count": 27,
+  "dedup_kept_count": 24,
+  "duplicates_merged": 3,
+  "top_leads_from_pipeline": [
+    {
+      "company_name": "Restaurante El Buen Sabor",
+      "category": "restaurantes",
+      "phone_e164": "+576012345678",
+      "email": "contacto@elbuensabor.com.co",
+      "website": "demo.test/sitios/restaurante-el-buen-sabor/index.html",
+      "address": "Cra 7 # 45-10, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Restaurante Doña Rosa",
+      "category": "restaurantes",
+      "phone_e164": "+573012345679",
+      "email": "info@donarosa.com.co",
+      "website": "demo.test/sitios/restaurante-dona-rosa/index.html",
+      "address": "Cra 15 # 67-20, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Pastelería y Cafetería Dulce Hogar",
+      "category": "restaurantes",
+      "phone_e164": "+573002345680",
+      "email": "ventas@dulcehogar.com.co",
+      "website": "demo.test/sitios/panaderia-dulce-hogar/index.html",
+      "address": "Calle 53 # 9-15, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Restaurante Sabor Costeño",
+      "category": "restaurantes",
+      "phone_e164": "+573178889900",
+      "email": "hola@saborcosteno.com.co",
+      "website": "demo.test/sitios/sabor-costeno/index.html",
+      "address": "Calle 100 # 15-30, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Restaurante Parrilla Los Amigos",
+      "category": "restaurantes",
+      "phone_e164": "+576015678901",
+      "email": "contacto@parrillalosamigos.com.co",
+      "website": "demo.test/sitios/parrilla-los-amigos/index.html",
+      "address": "Calle 63 # 8-90, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Contadores Ruiz SAS",
+      "category": "contadores",
+      "phone_e164": "+576017890123",
+      "email": "info@contadoresruiz.com.co",
+      "website": "demo.test/sitios/contadores-ruiz/index.html",
+      "address": "Calle 90 # 13-20, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Asesorías Contables del Norte",
+      "category": "contadores",
+      "phone_e164": "+573134567890",
+      "email": "contacto@acnorte.com.co",
+      "website": "demo.test/sitios/asesorias-contables-del-norte/index.html",
+      "address": "Cra 45 # 100-12, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Firma Contable Andina",
+      "category": "contadores",
+      "phone_e164": "+576016789012",
+      "email": "info@contableandina.com.co",
+      "website": "demo.test/sitios/firma-contable-andina/index.html",
+      "address": "Cra 13 # 85-40, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Servicios Tributarios Bogotá",
+      "category": "contadores",
+      "phone_e164": "+573187788990",
+      "email": "info@tributariosbogota.com.co",
+      "website": "demo.test/sitios/servicios-tributarios-bogota/index.html",
+      "address": "Cra 68 # 25-60, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Asesoría Fiscal y Contable Sur",
+      "category": "contadores",
+      "phone_e164": "+573145566778",
+      "email": "contacto@fiscalsur.com.co",
+      "website": "demo.test/sitios/asesoria-fiscal-contable-sur/index.html",
+      "address": "Cra 27 # 48-15, Bogotá",
+      "lead_score": 70
+    },
+    {
+      "company_name": "Restaurante La Fonda Antioqueña",
+      "category": "restaurantes",
+      "phone_e164": "+573156789012",
+      "email": null,
+      "website": "demo.test/sitios/la-fonda-antioquena/index.html",
+      "address": "Cra 30 # 18-40, Bogotá",
+      "lead_score": 40
+    },
+    {
+      "company_name": "Auditores y Contadores Prieto",
+      "category": "contadores",
+      "phone_e164": "+573192233445",
+      "email": null,
+      "website": "demo.test/sitios/auditores-contadores-prieto/index.html",
+      "address": "Cra 7 # 116-30, Bogotá",
+      "lead_score": 40
+    }
+  ],
+  "sample_excel_resumen": [
+    [
+      "Categoría",
+      "Total"
+    ],
+    [
+      "clinicas-dentales",
+      12
+    ],
+    [
+      "contadores",
+      12
+    ],
+    [
+      "restaurantes",
+      12
+    ],
+    [
+      "Rango de puntaje",
+      "Total"
+    ],
+    [
+      "Bajo (0-39)",
+      24
+    ],
+    [
+      "Medio (40-69)",
+      11
+    ],
+    [
+      "Alto (70-100)",
+      1
+    ]
+  ],
+  "sample_excel_fuentes": [
+    [
+      "Fuente",
+      "Leads encontrados",
+      "Duplicados fusionados"
+    ],
+    [
+      "demo-directory",
+      36,
+      8
+    ]
+  ],
+  "sample_excel_top_leads": [
+    {
+      "Empresa": "Pastelería y Cafetería Dulce Hogar",
+      "Categoría": "restaurantes",
+      "Teléfono": "+573002345680",
+      "Email": "ventas@dulcehogar.com.co",
+      "Email válido": true,
+      "Sitio web": "demo-directory/sitios/panaderia-dulce-hogar/index.html",
+      "Dirección": "Calle 53 # 9-15, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 70,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Asesorías Contables del Norte",
+      "Categoría": "contadores",
+      "Teléfono": "+573134567890",
+      "Email": "contacto@acnorte.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/asesorias-contables-del-norte/index.html",
+      "Dirección": "Cra 45 # 100-12, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Restaurante La Fonda Antioqueña",
+      "Categoría": "restaurantes",
+      "Teléfono": "+573156789012",
+      "Email": null,
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/la-fonda-antioquena/index.html",
+      "Dirección": "Cra 30 # 18-40, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Firma Contable Andina",
+      "Categoría": "contadores",
+      "Teléfono": "+576016789012",
+      "Email": "info@contableandina.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/firma-contable-andina/index.html",
+      "Dirección": "Cra 13 # 85-40, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Servicios Tributarios Bogotá",
+      "Categoría": "contadores",
+      "Teléfono": "+573187788990",
+      "Email": "info@tributariosbogota.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/servicios-tributarios-bogota/index.html",
+      "Dirección": "Cra 68 # 25-60, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Restaurante Sabor Costeño",
+      "Categoría": "restaurantes",
+      "Teléfono": "+573178889900",
+      "Email": "hola@saborcosteno.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/sabor-costeno/index.html",
+      "Dirección": "Calle 100 # 15-30, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Restaurante El Buen Sabor",
+      "Categoría": "restaurantes",
+      "Teléfono": "+576012345678",
+      "Email": "contacto@elbuensabor.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/restaurante-el-buen-sabor/index.html",
+      "Dirección": "Cra 7 # 45-10, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Asesoría Fiscal y Contable Sur",
+      "Categoría": "contadores",
+      "Teléfono": "+573145566778",
+      "Email": "contacto@fiscalsur.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/asesoria-fiscal-contable-sur/index.html",
+      "Dirección": "Cra 27 # 48-15, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Restaurante Parrilla Los Amigos",
+      "Categoría": "restaurantes",
+      "Teléfono": "+576015678901",
+      "Email": "contacto@parrillalosamigos.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/parrilla-los-amigos/index.html",
+      "Dirección": "Calle 63 # 8-90, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Auditores y Contadores Prieto",
+      "Categoría": "contadores",
+      "Teléfono": "+573192233445",
+      "Email": null,
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/auditores-contadores-prieto/index.html",
+      "Dirección": "Cra 7 # 116-30, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Contadores Ruiz SAS",
+      "Categoría": "contadores",
+      "Teléfono": "+576017890123",
+      "Email": "info@contadoresruiz.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/contadores-ruiz/index.html",
+      "Dirección": "Calle 90 # 13-20, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    },
+    {
+      "Empresa": "Restaurante Doña Rosa",
+      "Categoría": "restaurantes",
+      "Teléfono": "+573012345679",
+      "Email": "info@donarosa.com.co",
+      "Email válido": false,
+      "Sitio web": "demo-directory/sitios/restaurante-dona-rosa/index.html",
+      "Dirección": "Cra 15 # 67-20, Bogotá",
+      "Ciudad": "Bogotá",
+      "Puntaje": 40,
+      "Fuente": "demo-directory"
+    }
+  ]
+}
+

@@ -1,0 +1,172 @@
+{
+  "webhook_script_exit": 0,
+  "orders_created": [
+    {
+      "id": "ORD-STP-ABC999",
+      "external_id": "pi_3P8xYz2eZvKYlo2C0abc999",
+      "source": "stripe",
+      "status": "listo_para_despachar",
+      "payment_status": "paid",
+      "customer": {
+        "name": "Andrea Gómez",
+        "email": "andrea.gomez@example.com",
+        "phone": "+573204567890",
+        "shipping_address": {
+          "street": "Avenida El Poblado # 5A-110",
+          "city": "Medellín",
+          "state": "Antioquia",
+          "postal_code": "050022",
+          "country": "CO"
+        }
+      },
+      "items": [
+        {
+          "sku": "CF-HUI-250",
+          "title": "Café Huila Especial (250g)",
+          "quantity": 3,
+          "unit_price": 28000.0,
+          "total_price": 84000.0
+        }
+      ],
+      "total_amount": 84000.0,
+      "currency": "COP",
+      "created_at": "2026-11-22T17:06:23.997418Z",
+      "updated_at": "2026-11-22T17:06:23.997418Z",
+      "history": [
+        {
+          "from_status": "nuevo",
+          "to_status": "listo_para_despachar",
+          "timestamp": "2026-11-22T17:06:23.997418Z",
+          "note": "Pago confirmado por Stripe (pi_3P8xYz2eZvKYlo2C0abc999)"
+        }
+      ],
+      "metadata": {
+        "payment_intent_id": "pi_3P8xYz2eZvKYlo2C0abc999",
+        "status": "succeeded",
+        "payment_method_types": [
+          "card"
+        ]
+      }
+    },
+    {
+      "id": "ORD-SHP-1042",
+      "external_id": "1042",
+      "source": "shopify",
+      "status": "listo_para_despachar",
+      "payment_status": "paid",
+      "customer": {
+        "name": "Carlos Mendoza",
+        "email": "carlos.mendoza@example.com",
+        "phone": "+573159876543",
+        "shipping_address": {
+          "street": "Calle 10 # 43E-12, Apto 502",
+          "city": "Medellín",
+          "state": "Antioquia",
+          "postal_code": "050021",
+          "country": "CO"
+        }
+      },
+      "items": [
+        {
+          "sku": "CF-GEI-250",
+          "title": "Café Geisha Sierra Nevada (250g)",
+          "quantity": 1,
+          "unit_price": 55000.0,
+          "total_price": 55000.0
+        }
+      ],
+      "total_amount": 55000.0,
+      "currency": "COP",
+      "created_at": "2026-11-22T17:06:23.979332Z",
+      "updated_at": "2026-11-22T17:06:23.979332Z",
+      "history": [
+        {
+          "from_status": "nuevo",
+          "to_status": "listo_para_despachar",
+          "timestamp": "2026-11-22T17:06:23.979332Z",
+          "note": "Pedido recibido y normalizado desde Shopify (paid)"
+        }
+      ],
+      "metadata": {
+        "financial_status": "paid",
+        "fulfillment_status": null
+      }
+    },
+    {
+      "id": "ORD-WC-501",
+      "external_id": "501",
+      "source": "woocommerce",
+      "status": "listo_para_despachar",
+      "payment_status": "paid",
+      "customer": {
+        "name": "Ana Pérez",
+        "email": "your-user@example.com",
+        "phone": "+573001234567",
+        "shipping_address": {
+          "street": "Carrera 7 # 72-41 Oficina 802",
+          "city": "Bogotá",
+          "state": "Cundinamarca",
+          "postal_code": "110221",
+          "country": "CO"
+        }
+      },
+      "items": [
+        {
+          "sku": "CF-HUI-250",
+          "title": "Café Huila Especial (250g)",
+          "quantity": 2,
+          "unit_price": 28000.0,
+          "total_price": 56000.0
+        },
+        {
+          "sku": "CF-NAR-250",
+          "title": "Café Nariño Supremo (250g)",
+          "quantity": 1,
+          "unit_price": 30000.0,
+          "total_price": 30000.0
+        }
+      ],
+      "total_amount": 86000.0,
+      "currency": "COP",
+      "created_at": "2026-11-22T17:06:23.869880Z",
+      "updated_at": "2026-11-22T17:06:23.869880Z",
+      "history": [
+        {
+          "from_status": "nuevo",
+          "to_status": "listo_para_despachar",
+          "timestamp": "2026-11-22T17:06:23.869880Z",
+          "note": "Pedido recibido y normalizado desde WooCommerce webhook"
+        }
+      ],
+      "metadata": {
+        "raw_status": "processing",
+        "payment_method": "PSE / Transferencia Bancaria"
+      }
+    }
+  ],
+  "emails_sent": [
+    {
+      "to": "your-user@example.com",
+      "from": "pedidos@cafedeorigen.co",
+      "subject": "¡Tu pedido ORD-WC-501 está listo para despachar! - Café de Origen",
+      "text": "Hola Ana Pérez,\n\n¡Buenas noticias! Tu pedido ORD-WC-501 ha sido confirmado y su pago ha sido verificado con éxito.\nActualmente el pedido se encuentra LISTO PARA DESPACHAR.\n\nResumen del Pedido:\n - 2x Café Huila Especial (250g) ($56,000 COP)\n - 1x Café Nariño Supremo (250g) ($30,000 COP)\n\nTotal Pagado: $86,000 COP\nDirección de Entrega: Carrera 7 # 72-41 Oficina 802, Bogotá\n\nTe avisaremos tan pronto el mensajero retire tu paquete.\n\nAtentamente,\nEl equipo de Café de Origen ☕\n"
+    },
+    {
+      "to": "carlos.mendoza@example.com",
+      "from": "pedidos@cafedeorigen.co",
+      "subject": "¡Tu pedido ORD-SHP-1042 está listo para despachar! - Café de Origen",
+      "text": "Hola Carlos Mendoza,\n\n¡Buenas noticias! Tu pedido ORD-SHP-1042 ha sido confirmado y su pago ha sido verificado con éxito.\nActualmente el pedido se encuentra LISTO PARA DESPACHAR.\n\nResumen del Pedido:\n - 1x Café Geisha Sierra Nevada (250g) ($55,000 COP)\n\nTotal Pagado: $55,000 COP\nDirección de Entrega: Calle 10 # 43E-12, Apto 502, Medellín\n\nTe avisaremos tan pronto el mensajero retire tu paquete.\n\nAtentamente,\nEl equipo de Café de Origen ☕\n"
+    },
+    {
+      "to": "andrea.gomez@example.com",
+      "from": "pedidos@cafedeorigen.co",
+      "subject": "¡Tu pedido ORD-STP-ABC999 está listo para despachar! - Café de Origen",
+      "text": "Hola Andrea Gómez,\n\n¡Buenas noticias! Tu pedido ORD-STP-ABC999 ha sido confirmado y su pago ha sido verificado con éxito.\nActualmente el pedido se encuentra LISTO PARA DESPACHAR.\n\nResumen del Pedido:\n - 3x Café Huila Especial (250g) ($84,000 COP)\n\nTotal Pagado: $84,000 COP\nDirección de Entrega: Avenida El Poblado # 5A-110, Medellín\n\nTe avisaremos tan pronto el mensajero retire tu paquete.\n\nAtentamente,\nEl equipo de Café de Origen ☕\n"
+    }
+  ],
+  "whatsapp_notifications": [
+    "[WHATSAPP NOTIFICACIÓN] Para: +573001234567 | Mensaje:\n☕ *Café de Origen*: Hola Ana Pérez, tu pedido *ORD-WC-501* por $86,000 COP ha sido confirmado y está *LISTO PARA DESPACHAR*. Te avisaremos cuando salga de bodega.",
+    "[WHATSAPP NOTIFICACIÓN] Para: +573159876543 | Mensaje:\n☕ *Café de Origen*: Hola Carlos Mendoza, tu pedido *ORD-SHP-1042* por $55,000 COP ha sido confirmado y está *LISTO PARA DESPACHAR*. Te avisaremos cuando salga de bodega.",
+    "[WHATSAPP NOTIFICACIÓN] Para: +573204567890 | Mensaje:\n☕ *Café de Origen*: Hola Andrea Gómez, tu pedido *ORD-STP-ABC999* por $84,000 COP ha sido confirmado y está *LISTO PARA DESPACHAR*. Te avisaremos cuando salga de bodega."
+  ]
+}

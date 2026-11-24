@@ -1,0 +1,37 @@
+﻿.venv\Scripts\python.exe scripts\compare.py results\load-summary-1.json baseline.json --tolerance 100
+
+### Performance Regression Gate Comparison
+
+#### Response Time (p95)
+
+| Metric / Endpoint | Baseline p95 (ms) | Current p95 (ms) | Delta (%) | Threshold | Status |
+|---|---:|---:|---:|---:|:---:|
+| `http_req_duration` (overall) | 366.05 | 138.19 | -62.25% | ≤ +100.0% | PASS |
+| `admin_orders` | 543.59 | 342.44 | -37.00% | ≤ +100.0% | PASS |
+| `webhook_shopify` | 349.67 | 100.33 | -71.31% | ≤ +100.0% | PASS |
+| `webhook_woocommerce` | 372.24 | 103.81 | -72.11% | ≤ +100.0% | PASS |
+
+#### Reliability / Error Rate
+
+| Metric | Baseline Rate | Current Rate | Delta | Threshold | Status |
+|---|---:|---:|---:|---:|:---:|
+| `http_req_failed` | 0.00% | 0.00% | +0.00% | ≤ baseline | PASS |
+
+#### Overall Gate Status
+
+**Verdict:** ✅ PASSED
+
+
+# .venv\Scripts\python.exe scripts\trend.py past_summaries
+### Historical Performance Trend
+
+| Run / Artifact | Total Reqs | Error Rate | Overall p95 | WooCommerce p95 | Shopify p95 | Admin Orders p95 | Status |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| `run-3` | 1492 | 0.00% | 181.62 ms | 124.73 ms | 115.77 ms | 346.16 ms | ✅ PASS |
+| `run-2` | 1513 | 0.00% | 177.36 ms | 125.55 ms | 116.90 ms | 437.74 ms | ✅ PASS |
+| `run-1` | 1499 | 0.00% | 138.19 ms | 103.81 ms | 100.33 ms | 342.44 ms | ✅ PASS |
+
+
+# .venv\Scripts\python.exe -m pytest tests -q
+......                                                                   [100%]
+6 passed in 1.19s

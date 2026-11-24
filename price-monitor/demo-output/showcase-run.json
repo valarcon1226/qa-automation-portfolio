@@ -1,0 +1,43 @@
+﻿Updated headphones.html price to $65.00 (JSON-LD: 1, HTML: 1)
+{
+  "products": [
+    {
+      "name": "Mechanical Keyboard RGB",
+      "initial_price": 120.0,
+      "target_price": 100.0,
+      "latest_price": 120.0,
+      "currency": "USD",
+      "in_stock": true,
+      "alert_triggered": false
+    },
+    {
+      "name": "Studio Monitor Headphones",
+      "initial_price": 85.0,
+      "target_price": 70.0,
+      "latest_price": 65.0,
+      "currency": "USD",
+      "in_stock": true,
+      "alert_triggered": true,
+      "alert_type": "TARGET_PRICE_MET"
+    }
+  ],
+  "webhook_dispatched": [
+    {
+      "url": "http://localhost:8080/alerts",
+      "payload": {
+        "event": "PRICE_ALERT",
+        "product_id": "2c46a8ba-adc5-47e5-8d76-8272f3d6f58e",
+        "product_name": "Studio Monitor Headphones",
+        "url": "http://demo-store/products/headphones.html",
+        "old_price": 85.0,
+        "new_price": 65.0,
+        "target_price": 70.0,
+        "currency": "USD",
+        "alert_type": "TARGET_PRICE_MET",
+        "reason": "Price 65.00 is at or below target price of 70.00",
+        "timestamp": "2026-11-22T17:08:12.378842+00:00"
+      }
+    }
+  ]
+}
+

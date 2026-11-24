@@ -1,0 +1,30 @@
+﻿.venv\Scripts\python.exe -m evals.validate
+python.exe : 12:09:25 [INFO] validator: Validation mode: full (Total items parsed: 150)
+At line:5 char:8
++ $res = & $py -m evals.validate 2>&1 | Out-String
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (12:09:25 [INFO]...ms parsed: 150):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+12:09:25 [INFO] validator: Counts: dev_answerable=20, dev_unanswerable=10
+12:09:25 [INFO] validator: Counts: test_answerable=96, test_unanswerable=24
+12:09:25 [INFO] validator: All golden dataset checks PASSED successfully.
+{
+  "status": "VALID",
+  "file": "C:\\Users\\valentina.alarcon\\Documents\\PER\\Cursos\\Claudia\\Portfolio Gemini\\Potrafolio-Automation\\llm-platform-evals\\evals\\golden.jsonl",
+  "mode": "full",
+  "total_items": 150,
+  "dev_split": {
+    "total": 30,
+    "answerable": 20,
+    "unanswerable": 10
+  },
+  "test_split": {
+    "total": 120,
+    "answerable": 96,
+    "unanswerable": 24
+  },
+  "answerable_total": 116,
+  "unanswerable_total": 34
+}
+

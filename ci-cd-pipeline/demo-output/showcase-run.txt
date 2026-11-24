@@ -1,0 +1,175 @@
+﻿# Command: ruff check . && ruff format --check . && mypy app && bandit -r app && pytest -m 'not integration' --cov=app && live FastAPI API
+
+=== 1. Ruff Lint & Format ===
+All checks passed!
+10 files already formatted
+
+=== 2. Mypy Type Check ===
+Success: no issues found in 6 source files
+
+=== 3. Bandit SAST Scan ===
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.12.14
+Run started:2026-11-22 17:09:54.558772
+
+Test results:
+	No issues identified.
+
+Code scanned:
+	Total lines of code: 277
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 0
+Files skipped (0):
+
+=== 4. Pytest Unit Suite & Coverage ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\ci-cd-pipeline\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\ci-cd-pipeline
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, cov-6.0.0, timeout-2.3.1
+collecting ... collected 15 items / 1 deselected / 14 selected
+
+tests/test_unit.py::test_root_endpoint PASSED                            [  7%]
+tests/test_unit.py::test_health_endpoint_healthy PASSED                  [ 14%]
+tests/test_unit.py::test_health_endpoint_degraded PASSED                 [ 21%]
+tests/test_unit.py::test_create_deployment_success PASSED                [ 28%]
+tests/test_unit.py::test_create_deployment_validation_error PASSED       [ 35%]
+tests/test_unit.py::test_list_deployments_empty PASSED                   [ 42%]
+tests/test_unit.py::test_list_deployments_and_filters PASSED             [ 50%]
+tests/test_unit.py::test_get_deployment_by_id_success PASSED             [ 57%]
+tests/test_unit.py::test_get_deployment_by_id_not_found PASSED           [ 64%]
+tests/test_unit.py::test_update_deployment_success PASSED                [ 71%]
+tests/test_unit.py::test_update_deployment_not_found PASSED              [ 78%]
+tests/test_unit.py::test_delete_deployment_success PASSED                [ 85%]
+tests/test_unit.py::test_delete_deployment_not_found PASSED              [ 92%]
+tests/test_unit.py::test_settings_and_db_helpers PASSED                  [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:37
+  C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\ci-cd-pipeline\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform win32, python 3.12.14-final-0 ----------
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+app\__init__.py       0      0      0      0   100%
+app\config.py        12      0      0      0   100%
+app\crud.py          30      0      6      0   100%
+app\database.py      26      6      2      1    75%   13->16, 32-36, 45-46
+app\main.py          48      0      6      0   100%
+app\models.py        44      0      0      0   100%
+-------------------------------------------------------------
+TOTAL               160      6     14      1    96%
+
+Required test coverage of 80.0% reached. Total coverage: 95.98%
+================= 14 passed, 1 deselected, 1 warning in 2.14s =================
+
+=== 5. Live Deployment Tracker API Output ===
+{
+  "health": {
+    "status": "healthy",
+    "service": "ci-cd-pipeline-api",
+    "version": "1.0.0",
+    "database": "connected"
+  },
+  "created": [
+    {
+      "service_name": "order-service",
+      "environment": "production",
+      "version": "v1.2.0",
+      "status": "successful",
+      "deployed_by": "pipeline-bot",
+      "description": "Initial production release",
+      "id": 1,
+      "created_at": "2026-11-22T17:08:47.846295",
+      "updated_at": "2026-11-22T17:08:47.846295"
+    },
+    {
+      "service_name": "billing-api",
+      "environment": "staging",
+      "version": "v2.1.0-rc1",
+      "status": "successful",
+      "deployed_by": "release-manager",
+      "description": "Tax calculation patch",
+      "id": 2,
+      "created_at": "2026-11-22T17:08:47.905234",
+      "updated_at": "2026-11-22T17:08:47.905234"
+    },
+    {
+      "service_name": "checkout-worker",
+      "environment": "production",
+      "version": "v1.4.2",
+      "status": "failed",
+      "deployed_by": "pipeline-bot",
+      "description": "Smoke check timeout during rollout",
+      "id": 3,
+      "created_at": "2026-11-22T17:08:51.137536",
+      "updated_at": "2026-11-22T17:08:51.137536"
+    }
+  ],
+  "rolled_back": {
+    "service_name": "checkout-worker",
+    "environment": "production",
+    "version": "v1.4.2",
+    "status": "rolled_back",
+    "deployed_by": "pipeline-bot",
+    "description": "Manual rollback to v1.4.1 completed",
+    "id": 3,
+    "created_at": "2026-11-22T17:08:51.137536",
+    "updated_at": "2026-11-22T17:08:51.297138"
+  },
+  "deployments": [
+    {
+      "service_name": "checkout-worker",
+      "environment": "production",
+      "version": "v1.4.2",
+      "status": "rolled_back",
+      "deployed_by": "pipeline-bot",
+      "description": "Manual rollback to v1.4.1 completed",
+      "id": 3,
+      "created_at": "2026-11-22T17:08:51.137536",
+      "updated_at": "2026-11-22T17:08:51.297138"
+    },
+    {
+      "service_name": "billing-api",
+      "environment": "staging",
+      "version": "v2.1.0-rc1",
+      "status": "successful",
+      "deployed_by": "release-manager",
+      "description": "Tax calculation patch",
+      "id": 2,
+      "created_at": "2026-11-22T17:08:47.905234",
+      "updated_at": "2026-11-22T17:08:47.905234"
+    },
+    {
+      "service_name": "order-service",
+      "environment": "production",
+      "version": "v1.2.0",
+      "status": "successful",
+      "deployed_by": "pipeline-bot",
+      "description": "Initial production release",
+      "id": 1,
+      "created_at": "2026-11-22T17:08:47.846295",
+      "updated_at": "2026-11-22T17:08:47.846295"
+    }
+  ]
+}

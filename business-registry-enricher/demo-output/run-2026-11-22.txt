@@ -1,0 +1,84 @@
+.venv\Scripts\python.exe -m pytest -v 
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.2, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\business-registry-enricher\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\business-registry-enricher
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, platformdirs-4.12.2, cov-7.1.0, timeout-2.4.0
+collecting ... collected 72 items / 6 deselected / 66 selected
+
+tests/test_api_log.py::test_log_api_call_inserts_a_row_on_success PASSED [  1%]
+tests/test_api_log.py::test_log_api_call_inserts_a_row_on_failure PASSED [  3%]
+tests/test_api_log.py::test_log_write_failure_is_logged_and_not_raised PASSED [  4%]
+tests/test_cache.py::test_read_cache_returns_none_on_miss PASSED         [  6%]
+tests/test_cache.py::test_read_cache_returns_row_on_hit PASSED           [  7%]
+tests/test_cache.py::test_upsert_cache_runs_insert_on_conflict PASSED    [  9%]
+tests/test_cache.py::test_upsert_cache_serializes_dates_in_raw_data PASSED [ 10%]
+tests/test_companies_house.py::test_lookup_success PASSED                [ 12%]
+tests/test_companies_house.py::test_lookup_not_found_is_not_retried PASSED [ 13%]
+tests/test_companies_house.py::test_lookup_retries_on_429_then_succeeds PASSED [ 15%]
+tests/test_companies_house.py::test_lookup_fails_after_five_attempts_on_5xx PASSED [ 16%]
+tests/test_companies_house.py::test_log_write_failure_does_not_break_lookup PASSED [ 18%]
+tests/test_config.py::test_example_env_satisfies_settings PASSED         [ 19%]
+tests/test_config.py::test_missing_required_var_raises[DATABASE_URL] PASSED [ 21%]
+tests/test_config.py::test_missing_required_var_raises[API_KEY] PASSED   [ 22%]
+tests/test_config.py::test_missing_required_var_raises[CH_API_KEY] PASSED [ 24%]
+tests/test_config.py::test_missing_required_var_raises[INSEE_API_KEY] PASSED [ 25%]
+tests/test_enrich_api.py::test_single_enrich_first_call_not_cached_then_cached PASSED [ 27%]
+tests/test_enrich_api.py::test_single_enrich_force_refresh_skips_cache_read PASSED [ 28%]
+tests/test_enrich_api.py::test_single_enrich_not_found_returns_404 PASSED [ 30%]
+tests/test_enrich_api.py::test_single_enrich_registry_failure_returns_502 PASSED [ 31%]
+tests/test_enrich_api.py::test_single_enrich_cache_failure_returns_503 PASSED [ 33%]
+tests/test_enrich_api.py::test_batch_enrich_one_failing_item PASSED      [ 34%]
+tests/test_enrich_api.py::test_batch_enrich_one_item_with_cache_error_does_not_abort_batch PASSED [ 36%]
+tests/test_enrich_api.py::test_batch_enrich_requires_bearer_token PASSED [ 37%]
+tests/test_enrich_api.py::test_single_enrich_requires_bearer_token PASSED [ 39%]
+tests/test_enrich_api.py::test_single_enrich_rejects_invalid_identifier PASSED [ 40%]
+tests/test_enrich_api.py::test_batch_enrich_rejects_invalid_country PASSED [ 42%]
+tests/test_enrichment.py::test_enrich_cache_hit_skips_registry_call PASSED [ 43%]
+tests/test_enrichment.py::test_enrich_cache_miss_calls_registry_and_caches_result PASSED [ 45%]
+tests/test_enrichment.py::test_enrich_force_refresh_skips_cache_read_but_still_caches PASSED [ 46%]
+tests/test_enrichment.py::test_enrich_not_found_is_never_cached PASSED   [ 48%]
+tests/test_enrichment.py::test_enrich_registry_error_is_never_cached PASSED [ 50%]
+tests/test_enrichment.py::test_enrich_cache_read_failure_raises_cache_error PASSED [ 51%]
+tests/test_enrichment.py::test_enrich_cache_upsert_failure_raises_cache_error PASSED [ 53%]
+tests/test_health.py::test_health_ok PASSED                              [ 54%]
+tests/test_health.py::test_health_dependency_failure PASSED              [ 56%]
+tests/test_insee.py::test_lookup_success PASSED                          [ 57%]
+tests/test_insee.py::test_lookup_falls_back_to_individual_entrepreneur_name PASSED [ 59%]
+tests/test_insee.py::test_lookup_ceased_status PASSED                    [ 60%]
+tests/test_insee.py::test_lookup_not_found_is_not_retried PASSED         [ 62%]
+tests/test_insee.py::test_lookup_retries_on_429_then_succeeds PASSED     [ 63%]
+tests/test_insee.py::test_lookup_fails_after_five_attempts_on_5xx PASSED [ 65%]
+tests/test_insee.py::test_log_write_failure_does_not_break_lookup PASSED [ 66%]
+tests/test_models.py::test_valid_gb_identifier_normalized_uppercase PASSED [ 68%]
+tests/test_models.py::test_valid_fr_identifier PASSED                    [ 69%]
+tests/test_models.py::test_valid_eu_vies_identifier PASSED               [ 71%]
+tests/test_models.py::test_valid_el_for_greece PASSED                    [ 72%]
+tests/test_models.py::test_invalid_country_code_rejected PASSED          [ 74%]
+tests/test_models.py::test_invalid_gb_identifier_rejected PASSED         [ 75%]
+tests/test_models.py::test_invalid_fr_identifier_rejected PASSED         [ 77%]
+tests/test_models.py::test_invalid_vies_identifier_rejected PASSED       [ 78%]
+tests/test_models.py::test_batch_over_max_size_rejected PASSED           [ 80%]
+tests/test_models.py::test_batch_at_max_size_accepted PASSED             [ 81%]
+tests/test_models.py::test_batch_empty_rejected PASSED                   [ 83%]
+tests/test_models.py::test_batch_dedupes_by_country_and_identifier PASSED [ 84%]
+tests/test_rate_limiter.py::test_companies_house_limiter_blocks_after_600_in_window PASSED [ 86%]
+tests/test_rate_limiter.py::test_insee_limiter_blocks_after_30_in_window PASSED [ 87%]
+tests/test_security.py::test_verify_api_key_missing_credentials PASSED   [ 89%]
+tests/test_security.py::test_verify_api_key_wrong_token PASSED           [ 90%]
+tests/test_security.py::test_verify_api_key_right_token PASSED           [ 92%]
+tests/test_vies.py::test_lookup_valid_vat PASSED                         [ 93%]
+tests/test_vies.py::test_lookup_invalid_vat_is_a_successful_response PASSED [ 95%]
+tests/test_vies.py::test_lookup_retries_on_service_fault_then_succeeds PASSED [ 96%]
+tests/test_vies.py::test_lookup_fails_after_five_attempts_on_persistent_fault PASSED [ 98%]
+tests/test_vies.py::test_log_write_failure_does_not_break_lookup PASSED  [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\business-registry-enricher\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================= 66 passed, 6 deselected, 1 warning in 1.98s =================

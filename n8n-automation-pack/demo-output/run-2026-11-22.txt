@@ -1,0 +1,21 @@
+.venv\Scripts\python.exe -m pytest -v 
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.2, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\n8n-automation-pack\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\n8n-automation-pack
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, cov-7.1.0, timeout-2.4.0
+collecting ... collected 31 items / 22 deselected / 9 selected
+
+tests/test_fake_llm.py::test_extract_invoice_parses_all_fields PASSED    [ 11%]
+tests/test_fake_llm.py::test_extract_invoice_missing_fields_are_none PASSED [ 22%]
+tests/test_fake_llm.py::test_build_daily_summary_repeats_prompt_numbers PASSED [ 33%]
+tests/test_workflows_json.py::test_every_workflow_file_is_valid_json PASSED [ 44%]
+tests/test_workflows_json.py::test_no_secret_like_values_in_workflow_files PASSED [ 55%]
+tests/test_workflows_json.py::test_credentials_are_referenced_only_by_id_and_name PASSED [ 66%]
+tests/test_workflows_json.py::test_every_flow_has_an_error_workflow_configured PASSED [ 77%]
+tests/test_workflows_json.py::test_no_workflow_reads_env_vars PASSED     [ 88%]
+tests/test_workflows_json.py::test_every_inbound_webhook_is_protected PASSED [100%]
+
+====================== 9 passed, 22 deselected in 0.22s =======================

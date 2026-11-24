@@ -1,0 +1,47 @@
+﻿.venv\Scripts\python.exe -c '<Real HTTP RSS feeds + fake_llm HTTP server + MemoryDatabase + HTML digest>'
+INGESTION SUMMARY: {"processed_sources": 3, "total_articles": 6, "new_articles": 4, "duplicates_detected": 2}
+ARTICLES: [
+  {
+    "source": "TechNews A",
+    "category": "Inteligencia Artificial",
+    "title": "OpenAI presenta su nuevo modelo GPT-5 con razonamiento avanzado",
+    "is_duplicate": false,
+    "ai_summary": "- Eres un analista de inteligencia tecnológica.\n- Genera un resumen ejecutivo de 2 o 3 viñetas concisas en español sobre el siguiente artículo:.\n- Título: OpenAI presenta su nuevo modelo GPT-5 con razonamiento avanzado."
+  },
+  {
+    "source": "TechNews A",
+    "category": "Cloud y DevOps",
+    "title": "Kubernetes 1.32 introduce mejoras críticas en la gestión de memoria y contenedores",
+    "is_duplicate": false,
+    "ai_summary": "- Eres un analista de inteligencia tecnológica.\n- Genera un resumen ejecutivo de 2 o 3 viñetas concisas en español sobre el siguiente artículo:.\n- Título: Kubernetes 1."
+  },
+  {
+    "source": "DailyTech B",
+    "category": "General",
+    "title": "Llega GPT-5: OpenAI revoluciona la inteligencia artificial con nuevo motor de razonamiento",
+    "is_duplicate": true,
+    "ai_summary": null
+  },
+  {
+    "source": "DailyTech B",
+    "category": "Ciberseguridad",
+    "title": "Alerta global por nueva ola de ataques de ransomware dirigidos a servidores Linux",
+    "is_duplicate": false,
+    "ai_summary": "- Eres un analista de inteligencia tecnológica.\n- Genera un resumen ejecutivo de 2 o 3 viñetas concisas en español sobre el siguiente artículo:.\n- Título: Alerta global por nueva ola de ataques de ransomware dirigidos a servidores Linux."
+  },
+  {
+    "source": "GlobalNews C",
+    "category": "General",
+    "title": "OpenAI desvela GPT-5 y redefine los estándares de la computación cognitiva",
+    "is_duplicate": true,
+    "ai_summary": null
+  },
+  {
+    "source": "GlobalNews C",
+    "category": "Fintech y Mercados",
+    "title": "Las acciones de gigantes tecnológicos impulsan el índice bursátil a máximos históricos",
+    "is_duplicate": false,
+    "ai_summary": "- Eres un analista de inteligencia tecnológica.\n- Genera un resumen ejecutivo de 2 o 3 viñetas concisas en español sobre el siguiente artículo:.\n- Título: Las acciones de gigantes tecnológicos impulsan el índice bursátil a máximos históricos."
+  }
+]
+HTML DIGEST RENDERED: 7022 bytes -> demo-output/showcase-digest.html

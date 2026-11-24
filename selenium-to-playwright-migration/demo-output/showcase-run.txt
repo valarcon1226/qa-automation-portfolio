@@ -1,0 +1,55 @@
+﻿.venv\Scripts\python.exe -m pytest tests -v
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\selenium-to-playwright-migration\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\selenium-to-playwright-migration
+configfile: pytest.ini
+plugins: playwright-0.10.0
+collecting ... collected 6 items
+
+tests/test_bench.py::test_parse_junit_xml_passing PASSED                 [ 16%]
+tests/test_bench.py::test_parse_junit_xml_failures_and_name_cleaning PASSED [ 33%]
+tests/test_bench.py::test_percentile_95 PASSED                           [ 50%]
+tests/test_bench.py::test_aggregate_suite_metrics PASSED                 [ 66%]
+tests/test_bench.py::test_count_loc PASSED                               [ 83%]
+tests/test_bench.py::test_generate_benchmark_markdown PASSED             [100%]
+
+============================== 6 passed in 0.12s ==============================
+
+--- results/benchmark.md ---
+# Benchmark Report: Selenium 4 vs Playwright Migration
+
+- **Timestamp**: 2026-11-11T02:54:14.917156+00:00
+- **Repetitions per Suite**: 3
+- **Python Interpreter**: 3.12.14
+- **Browser**: Microsoft Edge (headless)
+
+## 1. Suite-Level Summary
+
+| Metric | Legacy Selenium 4 | Migrated Playwright | Delta / Comparison |
+| :--- | :---: | :---: | :---: |
+| **Lines of Code (code lines)** | 345 | 304 | -11.9% |
+| **Total Lines (with comments)** | 453 | 397 | - |
+| **Python Files** | 11 | 11 | - |
+| **Median Suite Duration** | 50.385 s | 14.845 s | **3.39x faster** |
+| **P95 Suite Duration** | 61.045 s | 20.497 s | - |
+
+## 2. Per-Scenario Failure Rate & Durations
+
+| Scenario | Selenium Fail Rate | Selenium Median | Playwright Fail Rate | Playwright Median | Speedup |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| `test_add_to_cart` | 0.0% (0/3) | 5.889 s | 0.0% (0/3) | 1.032 s | 5.71x |
+| `test_language_change` | 0.0% (0/3) | 5.284 s | 0.0% (0/3) | 1.238 s | 4.27x |
+| `test_login_invalid` | 0.0% (0/3) | 4.986 s | 0.0% (0/3) | 0.782 s | 6.38x |
+| `test_login_valid` | 0.0% (0/3) | 5.927 s | 0.0% (0/3) | 1.852 s | 3.20x |
+| `test_remove_from_cart` | 0.0% (0/3) | 6.242 s | 0.0% (0/3) | 1.191 s | 5.24x |
+| `test_search_with_results` | 0.0% (0/3) | 6.325 s | 0.0% (0/3) | 1.170 s | 5.41x |
+| `test_search_without_results` | 0.0% (0/3) | 5.305 s | 0.0% (0/3) | 0.895 s | 5.93x |
+| `test_user_registration` | 0.0% (0/3) | 10.647 s | 0.0% (0/3) | 6.473 s | 1.64x |
+
+## 3. Analysis & Key Findings
+
+1. **Execution Velocity**: Playwright is overall **3.39x** relative to Selenium 4 on the identical 8 scenarios.
+2. **Flakiness & Failure Rate**: Selenium explicit waits were configured without arbitrary sleeps. Real failure rates reflect DOM and overlay synchronization differences.
+3. **Code Economy**: Migration resulted in a **-11.9%** change in executable lines of code while retaining the same Page Object model abstractions.
+

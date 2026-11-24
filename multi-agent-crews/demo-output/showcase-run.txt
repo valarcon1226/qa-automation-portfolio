@@ -1,0 +1,64 @@
+﻿# Command: .venv\Scripts\python.exe scripts/compare.py --fake --runs 3 && .venv\Scripts\python.exe C:\Users\valentina.alarcon\.gemini\antigravity\brain\2b52bb16-663d-4f2e-a64f-b0e05eb375c9\scratch\run_17.py
+=== Measured Comparison ===
+## MediciÃ³n (2026-11-22, fake LLM (deterministic), 3 corridas por motor)
+
+| Engine | Avg seconds | Avg LLM calls | Complete reports | Lines of code (non-blank) |
+|---|---|---|---|---|
+| CrewAI | 1.7 | 6.0 | 3/3 | 62 |
+| AutoGen | 0.1 | 6.0 | 3/3 | 62 |
+
+=== FastAPI POST /reports + GET /reports/{id} ===
+{
+  "crewai": {
+    "id": 1,
+    "topic": "demand for AI agents in LATAM",
+    "engine": "crewai",
+    "status": "completed",
+    "report": {
+      "title": "demand for AI agents in LATAM",
+      "findings": [
+        "Las vacantes que piden CrewAI o AutoGen pasaron de 1.200 a 3.600 en un año (+200%) [doc_03.md].",
+        "El 62% de las pymes encuestadas quiere automatizar la atención por WhatsApp [doc_01.md]."
+      ],
+      "sources": [
+        "doc_01.md",
+        "doc_07.md",
+        "doc_08.md"
+      ],
+      "recommendations": [
+        "Priorizar un producto de agentes para atención al cliente por WhatsApp.",
+        "Ofrecer despliegue gestionado: es lo que más cuesta a las pymes."
+      ],
+      "markdown": "# Demanda de agentes de IA en LATAM\n\n## Hallazgos\n- Las vacantes que piden CrewAI o AutoGen pasaron de 1.200 a 3.600 en un año (+200%) [doc_03.md].\n- El 62% de las pymes encuestadas quiere automatizar la atención por WhatsApp [doc_01.md].\n\n## Recomendaciones\n- Priorizar un producto de agentes para atención al cliente por WhatsApp.\n- Ofrecer despliegue gestionado: es lo que más cuesta a las pymes.\n\n## Fuentes\n- doc_01.md\n- doc_03.md",
+      "llm_calls": 6,
+      "seconds": 4.2
+    },
+    "error": null
+  },
+  "autogen": {
+    "id": 2,
+    "topic": "demand for AI agents in LATAM",
+    "engine": "autogen",
+    "status": "completed",
+    "report": {
+      "title": "demand for AI agents in LATAM",
+      "findings": [
+        "Las vacantes que piden CrewAI o AutoGen pasaron de 1.200 a 3.600 en un año (+200%) [doc_03.md].",
+        "El 62% de las pymes encuestadas quiere automatizar la atención por WhatsApp [doc_01.md]."
+      ],
+      "sources": [
+        "doc_01.md",
+        "doc_07.md",
+        "doc_08.md"
+      ],
+      "recommendations": [
+        "Priorizar un producto de agentes para atención al cliente por WhatsApp.",
+        "Ofrecer despliegue gestionado: es lo que más cuesta a las pymes."
+      ],
+      "markdown": "# Demanda de agentes de IA en LATAM\n\n## Hallazgos\n- Las vacantes que piden CrewAI o AutoGen pasaron de 1.200 a 3.600 en un año (+200%) [doc_03.md].\n- El 62% de las pymes encuestadas quiere automatizar la atención por WhatsApp [doc_01.md].\n\n## Recomendaciones\n- Priorizar un producto de agentes para atención al cliente por WhatsApp.\n- Ofrecer despliegue gestionado: es lo que más cuesta a las pymes.\n\n## Fuentes\n- doc_01.md\n- doc_03.md",
+      "llm_calls": 6,
+      "seconds": 0.13
+    },
+    "error": null
+  }
+}

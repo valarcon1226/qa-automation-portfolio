@@ -1,0 +1,36 @@
+﻿# Command: .venv\Scripts\python.exe samples/send_webhooks.py (executed against live FastAPI app with InMemoryRepository & local SMTP listener)
+Intento de webhook WooCommerce con firma inválida o ausente.
+======================================================================
+DEMO: ENVIO Y VALIDACION DE WEBHOOKS - CAFE DE ORIGEN
+Destino: http://127.0.0.1:63766
+======================================================================
+
+[1/5] [WooCommerce] Enviando pedido WooCommerce (order.created)...
+  Status: 200
+  Respuesta: {'status': 'processed', 'order_id': 'ORD-WC-501', 'external_id': '501', 'order_status': 'listo_para_despachar', 'total': 86000.0}
+
+[2/5] [Shopify] Enviando pedido Shopify (orders/create)...
+  Status: 200
+  Respuesta: {'status': 'processed', 'order_id': 'ORD-SHP-1042', 'external_id': '1042', 'order_status': 'listo_para_despachar', 'total': 55000.0}
+
+[3/5] [Stripe] Enviando pago Stripe (payment_intent.succeeded)...
+  Status: 200
+  Respuesta: {'status': 'processed', 'order_id': 'ORD-STP-ABC999', 'external_id': 'pi_3P8xYz2eZvKYlo2C0abc999', 'order_status': 'listo_para_despachar', 'total': 84000.0}
+
+[4/5] [Idempotencia] Probando reenvio del mismo pedido WooCommerce...
+  Status: 200
+  Respuesta: {'status': 'ignored', 'reason': 'duplicate_event', 'order_id': 'ORD-WC-501', 'event_id': 'wc_delivery_sample_501'}
+  [OK] EXITO: El evento duplicado fue ignorado sin crear pedido repetido.
+
+[5/5] [Seguridad] Probando rechazo de firma invalida o alterada...
+  Status: 401 (Esperado 401)
+  Respuesta: {'detail': 'Firma de webhook WooCommerce inválida (x-wc-webhook-signature).'}
+  [OK] EXITO: Peticion rechazada con 401 Unauthorized.
+
+======================================================================
+Demostracion completada exitosamente.
+Accede a http://localhost:8000/admin para revisar los pedidos en el panel.
+Accede a http://localhost:8025 para revisar los correos en Mailpit.
+======================================================================
+
+SAVED showcase-run.json with 3 orders, 3 emails, 3 whatsapp msgs

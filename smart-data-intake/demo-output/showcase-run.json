@@ -1,0 +1,366 @@
+﻿[
+  {
+    "file": "listado_siniestros_desordenado.xlsx",
+    "sheets": [
+      "Portada y Control",
+      "Siniestros Autos y Hogar",
+      "Resumen Auditoría"
+    ],
+    "selected_sheet": "Siniestros Autos y Hogar",
+    "total_rows_seen": 10,
+    "clean_count": 3,
+    "review_count": 2,
+    "failed_count": 1,
+    "discarded_count": 4,
+    "clean": [
+      {
+        "line": 6,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "Carlos",
+          "last_name": "Mendez",
+          "email": "carlos.mendez@example.com",
+          "phone": "+1-555-0198",
+          "company": "Acme Corp",
+          "poliza_siniestro_numero_referencia": "SIN-001",
+          "ocurrencia_fecha_siniestro": "2026-02-14",
+          "liquidacion_monto_reclamado": "$ 1,500.00"
+        }
+      },
+      {
+        "line": 10,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "Maria",
+          "last_name": "Lopez",
+          "email": "maria.lopez@example.com",
+          "phone": "+1-555-0211",
+          "company": "Global Logistics",
+          "poliza_siniestro_numero_referencia": "SIN-004",
+          "ocurrencia_fecha_siniestro": "2026-05-05",
+          "liquidacion_monto_reclamado": "4500"
+        }
+      },
+      {
+        "line": 13,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "Roberto",
+          "last_name": "Gomez",
+          "email": "roberto.gomez@empresa.org",
+          "phone": "555-0322",
+          "company": "Apex Retail",
+          "poliza_siniestro_numero_referencia": "SIN-005",
+          "ocurrencia_fecha_siniestro": "2026-06-18",
+          "liquidacion_monto_reclamado": "12000.75"
+        }
+      }
+    ],
+    "review": [
+      {
+        "line": 7,
+        "classification": "ambiguous",
+        "issues": [
+          "Missing company",
+          "Potentially invalid email domain"
+        ],
+        "data": {
+          "first_name": "Ana",
+          "last_name": "Smith",
+          "email": "ana.smith@smith",
+          "phone": "555-0199",
+          "company": "",
+          "poliza_siniestro_numero_referencia": "SIN-002",
+          "ocurrencia_fecha_siniestro": "15/03/2026",
+          "liquidacion_monto_reclamado": "USD 2.300,50"
+        }
+      },
+      {
+        "line": 14,
+        "classification": "ambiguous",
+        "issues": [
+          "Potentially invalid email domain"
+        ],
+        "data": {
+          "first_name": "Laura",
+          "last_name": "Fernandez",
+          "email": "laura@fernandez",
+          "phone": "+1-555-0433",
+          "company": "Orion Tech",
+          "poliza_siniestro_numero_referencia": "SIN-006",
+          "ocurrencia_fecha_siniestro": "2026-07-22",
+          "liquidacion_monto_reclamado": "$ 3.200"
+        }
+      }
+    ],
+    "failed": [
+      {
+        "line": 8,
+        "classification": "failed",
+        "issues": [
+          "Missing required fields",
+          "Invalid email",
+          "Invalid phone"
+        ],
+        "data": {
+          "first_name": "",
+          "last_name": "",
+          "email": "invalid-email",
+          "phone": "",
+          "company": "Seguros Alfa",
+          "poliza_siniestro_numero_referencia": "SIN-003",
+          "ocurrencia_fecha_siniestro": "2026/04/01",
+          "liquidacion_monto_reclamado": "850"
+        }
+      }
+    ],
+    "discarded": [
+      {
+        "line": 9,
+        "reason": "Empty row discarded",
+        "raw": {}
+      },
+      {
+        "line": 11,
+        "reason": "Total/subtotal row discarded: SUBTOTAL RAMO AUTOMOTOR",
+        "raw": {
+          "first_name": "SUBTOTAL RAMO AUTOMOTOR",
+          "last_name": "",
+          "email": "",
+          "phone": "",
+          "company": "",
+          "poliza_siniestro_numero_referencia": "",
+          "ocurrencia_fecha_siniestro": "",
+          "liquidacion_monto_reclamado": "$ 9,150.50"
+        }
+      },
+      {
+        "line": 12,
+        "reason": "Empty row discarded",
+        "raw": {}
+      },
+      {
+        "line": 15,
+        "reason": "Total/subtotal row discarded: TOTAL GENERAL SINIESTROS",
+        "raw": {
+          "first_name": "TOTAL GENERAL SINIESTROS",
+          "last_name": "",
+          "email": "",
+          "phone": "",
+          "company": "",
+          "poliza_siniestro_numero_referencia": "",
+          "ocurrencia_fecha_siniestro": "",
+          "liquidacion_monto_reclamado": "$ 24,351.25"
+        }
+      }
+    ]
+  },
+  {
+    "file": "bienes_asegurados_desordenado.xlsx",
+    "sheets": [
+      "Instrucciones",
+      "Bienes Asegurados",
+      "Firmas y Responsables"
+    ],
+    "selected_sheet": "Bienes Asegurados",
+    "total_rows_seen": 9,
+    "clean_count": 3,
+    "review_count": 1,
+    "failed_count": 1,
+    "discarded_count": 4,
+    "clean": [
+      {
+        "line": 6,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "Diego",
+          "last_name": "Morales",
+          "email": "diego.morales@example.com",
+          "phone": "+1-555-0555",
+          "company": "Andes Mining",
+          "identificacion_descripcion_bien": "Camión Minero Caterpillar 797F",
+          "vigencia_fecha_alta": "2026-01-10",
+          "valoracion_valor_asegurado": "$ 85,000.00"
+        }
+      },
+      {
+        "line": 10,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "Javier",
+          "last_name": "Ruiz",
+          "email": "javier.ruiz@example.com",
+          "phone": "+1-555-0777",
+          "company": "Transportes Norte",
+          "identificacion_descripcion_bien": "Semirremolque Frigorífico",
+          "vigencia_fecha_alta": "2026-04-15",
+          "valoracion_valor_asegurado": "350000.5"
+        }
+      },
+      {
+        "line": 13,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "Elena",
+          "last_name": "Vega",
+          "email": "elena.vega@example.com",
+          "phone": "+1-555-0888",
+          "company": "Farmacéutica Sur",
+          "identificacion_descripcion_bien": "Línea de Envasado Automatizada",
+          "vigencia_fecha_alta": "2026-05-20",
+          "valoracion_valor_asegurado": "$ 95,000.00"
+        }
+      }
+    ],
+    "review": [
+      {
+        "line": 7,
+        "classification": "ambiguous",
+        "issues": [
+          "Missing company",
+          "Potentially invalid email domain"
+        ],
+        "data": {
+          "first_name": "Sofia",
+          "last_name": "Castro",
+          "email": "sofia@castro",
+          "phone": "555-0666",
+          "company": "",
+          "identificacion_descripcion_bien": "Generador Diésel Cummins 500kVA",
+          "vigencia_fecha_alta": "28/02/2026",
+          "valoracion_valor_asegurado": "USD 120.000,00"
+        }
+      }
+    ],
+    "failed": [
+      {
+        "line": 8,
+        "classification": "failed",
+        "issues": [
+          "Missing required fields",
+          "Invalid email",
+          "Invalid phone"
+        ],
+        "data": {
+          "first_name": "",
+          "last_name": "",
+          "email": "correo-invalido",
+          "phone": "",
+          "company": "Soluciones Industriales",
+          "identificacion_descripcion_bien": "Transformador Eléctrico 25MVA",
+          "vigencia_fecha_alta": "2026-03-12",
+          "valoracion_valor_asegurado": "15000"
+        }
+      }
+    ],
+    "discarded": [
+      {
+        "line": 9,
+        "reason": "Empty row discarded",
+        "raw": {}
+      },
+      {
+        "line": 11,
+        "reason": "Total/subtotal row discarded: SUBTOTAL FLOTA PESADA",
+        "raw": {
+          "first_name": "SUBTOTAL FLOTA PESADA",
+          "last_name": "",
+          "email": "",
+          "phone": "",
+          "company": "",
+          "identificacion_descripcion_bien": "",
+          "vigencia_fecha_alta": "",
+          "valoracion_valor_asegurado": "$ 570,000.50"
+        }
+      },
+      {
+        "line": 12,
+        "reason": "Empty row discarded",
+        "raw": {}
+      },
+      {
+        "line": 14,
+        "reason": "Total/subtotal row discarded: TOTAL GENERAL BIENES",
+        "raw": {
+          "first_name": "TOTAL GENERAL BIENES",
+          "last_name": "",
+          "email": "",
+          "phone": "",
+          "company": "",
+          "identificacion_descripcion_bien": "",
+          "vigencia_fecha_alta": "",
+          "valoracion_valor_asegurado": "$ 665,000.50"
+        }
+      }
+    ]
+  },
+  {
+    "file": "customers.csv",
+    "sheets": [
+      "csv"
+    ],
+    "selected_sheet": "csv",
+    "total_rows_seen": 3,
+    "clean_count": 1,
+    "review_count": 1,
+    "failed_count": 1,
+    "discarded_count": 0,
+    "clean": [
+      {
+        "line": 2,
+        "classification": "clean",
+        "issues": [],
+        "data": {
+          "first_name": "John",
+          "last_name": "Doe",
+          "email": "john.doe@example.com",
+          "phone": "+1-555-0198",
+          "company": "Acme Corp"
+        }
+      }
+    ],
+    "review": [
+      {
+        "line": 3,
+        "classification": "ambiguous",
+        "issues": [
+          "Missing company",
+          "Potentially invalid email domain"
+        ],
+        "data": {
+          "first_name": "Jane",
+          "last_name": "Smith",
+          "email": "jane@smith",
+          "phone": "555-0199",
+          "company": ""
+        }
+      }
+    ],
+    "failed": [
+      {
+        "line": 4,
+        "classification": "failed",
+        "issues": [
+          "Missing required fields",
+          "Invalid email",
+          "Missing company",
+          "Invalid phone"
+        ],
+        "data": {
+          "first_name": "",
+          "last_name": "",
+          "email": "invalid-email",
+          "phone": "",
+          "company": ""
+        }
+      }
+    ],
+    "discarded": []
+  }
+]

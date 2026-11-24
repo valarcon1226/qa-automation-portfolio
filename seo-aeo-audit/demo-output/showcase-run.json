@@ -1,0 +1,26 @@
+{
+  "sabor_de_casa_report": {
+    "scores": [
+      {
+        "label": "Puntaje Global",
+        "value": "35"
+      },
+      {
+        "label": "SEO On-Page & Técnico",
+        "value": "0"
+      },
+      {
+        "label": "AEO (Respuestas IA)",
+        "value": "40"
+      },
+      {
+        "label": "Lighthouse (Inicio)",
+        "value": "89"
+      }
+    ],
+    "aeo_breakdown": [],
+    "pages": [],
+    "issues_total": 0,
+    "sample_issues": []
+  }
+}

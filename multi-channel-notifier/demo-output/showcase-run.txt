@@ -1,0 +1,32 @@
+﻿.venv\Scripts\python.exe -c '<FastAPI TestClient /api/v1/notify + Jinja2 template rendering>'
+Available templates: ['daily_report', 'slack_alert', 'welcome_email']
+
+=== CASE 1: welcome_email ===
+POST /api/v1/notify -> 200 {"notification_id": "db337dcf-beed-4c4b-a7e4-db14d46ae397", "status": "queued", "message": "Notification queued for processing."}
+GET /api/v1/notifications/{id} -> {"id": "db337dcf-beed-4c4b-a7e4-db14d46ae397", "template_name": "welcome_email", "status": "completed", "created_at": "2026-11-22T17:05:58.019605Z", "delivery_logs": [{"channel": "email", "status": "delivered", "processed_at": "2026-11-22T17:05:58.019605Z"}, {"channel": "slack", "status": "delivered", "processed_at": "2026-11-22T17:05:58.019605Z"}, {"channel": "telegram", "status": "delivered", "processed_at": "2026-11-22T17:05:58.019605Z"}, {"channel": "discord", "status": "delivered", "processed_at": "2026-11-22T17:05:58.019605Z"}]}
+Email Subject: Welcome to Data Intake Pipeline
+Rendered Message:
+Hello Alice,
+
+Welcome to Data Intake Pipeline!
+
+Thanks for joining us.
+HTML Email Preview Rendered: 152 chars
+
+=== CASE 2: slack_alert ===
+POST /api/v1/notify -> 200 {"notification_id": "660a0b50-bfd4-4533-973b-21e47aabfc73", "status": "queued", "message": "Notification queued for processing."}
+GET /api/v1/notifications/{id} -> {"id": "660a0b50-bfd4-4533-973b-21e47aabfc73", "template_name": "slack_alert", "status": "completed", "created_at": "2026-11-22T17:05:58.482318Z", "delivery_logs": [{"channel": "slack", "status": "delivered", "processed_at": "2026-11-22T17:05:58.482318Z"}, {"channel": "discord", "status": "delivered", "processed_at": "2026-11-22T17:05:58.482318Z"}]}
+Rendered Message:
+:rotating_light: *CRITICAL*: Database connection pool at 95% capacity
+System: Order Automation API
+
+=== CASE 3: daily_report ===
+POST /api/v1/notify -> 200 {"notification_id": "71f0a2f7-1be9-456a-b31c-589cbbe03723", "status": "queued", "message": "Notification queued for processing."}
+GET /api/v1/notifications/{id} -> {"id": "71f0a2f7-1be9-456a-b31c-589cbbe03723", "template_name": "daily_report", "status": "completed", "created_at": "2026-11-22T17:05:58.558374Z", "delivery_logs": [{"channel": "email", "status": "delivered", "processed_at": "2026-11-22T17:05:58.558374Z"}]}
+Email Subject: Daily Operations Report - 2026-11-22
+Rendered Message:
+Daily Report — 2026-11-22
+
+Summary: All scheduled ingestion and cleaning batches finished within SLA.
+
+Total items processed: 148

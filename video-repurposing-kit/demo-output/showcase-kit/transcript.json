@@ -1,0 +1,48 @@
+{
+  "segments": [
+    {
+      "id": 0,
+      "start": 54.96,
+      "end": 56.36,
+      "text": "2.",
+      "words": [
+        {
+          "word": "2.",
+          "start": 54.96,
+          "end": 56.36,
+          "probability": 0.004
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "start": 57.3,
+      "end": 58.7,
+      "text": "6.",
+      "words": [
+        {
+          "word": "6.",
+          "start": 57.3,
+          "end": 58.7,
+          "probability": 0.016
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "start": 58.72,
+      "end": 59.64,
+      "text": "3.",
+      "words": [
+        {
+          "word": "3.",
+          "start": 58.72,
+          "end": 59.64,
+          "probability": 0.06
+        }
+      ]
+    }
+  ],
+  "language": "nn",
+  "duration": 120.0
+}

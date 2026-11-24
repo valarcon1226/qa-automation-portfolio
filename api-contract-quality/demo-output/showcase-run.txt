@@ -1,0 +1,26 @@
+﻿npm run test:consumer
+
+> api-contract-quality@1.0.0 test:consumer
+> jest --testPathPattern=tests/consumer --runInBand
+
+[12:08:19.216] [32mINFO[39m (116968): [36m0.4.22: pact native library successfully found, and the correct version[39m
+2026-11-22T17:08:19.244160Z  INFO tokio-runtime-worker pact_mock_server::hyper_server: Received request POST /web/chat
+2026-11-22T17:08:19.245121Z  INFO tokio-runtime-worker pact_mock_server::hyper_server: Request matched, sending response
+2026-11-22T17:08:19.251020Z  WARN ThreadId(02) pact_models::pact: Note: Existing pact is an older specification version (V3), and will be upgraded
+2026-11-22T17:08:19.257230Z  INFO tokio-runtime-worker pact_mock_server::hyper_server: Received request POST /web/chat
+2026-11-22T17:08:19.257826Z  INFO tokio-runtime-worker pact_mock_server::hyper_server: Request matched, sending response
+2026-11-22T17:08:19.260597Z  WARN ThreadId(02) pact_models::pact: Note: Existing pact is an older specification version (V3), and will be upgraded
+2026-11-22T17:08:19.265916Z  INFO tokio-runtime-worker pact_mock_server::hyper_server: Received request POST /web/chat
+2026-11-22T17:08:19.266535Z  INFO tokio-runtime-worker pact_mock_server::hyper_server: Request matched, sending response
+2026-11-22T17:08:19.269031Z  WARN ThreadId(02) pact_models::pact: Note: Existing pact is an older specification version (V3), and will be upgraded
+PASS tests/consumer/chat-widget.spec.ts (12.325 s)
+  WebChatWidget Consumer Contract Tests
+    when a customer sends a message via the chat widget
+      √ receives an array of assistant replies (200 OK) (28 ms)
+      √ receives 422 Unprocessable Entity when message text is empty (9 ms)
+      √ receives 429 Too Many Requests when rate limit is exceeded (8 ms)
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        13.928 s
+Ran all test suites matching /tests\\consumer/i.

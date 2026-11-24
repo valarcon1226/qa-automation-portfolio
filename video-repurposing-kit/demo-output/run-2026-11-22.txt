@@ -1,0 +1,36 @@
+.venv\Scripts\python.exe -m pytest -v 
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\video-repurposing-kit\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\video-repurposing-kit
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, cov-7.1.0
+collecting ... collected 24 items
+
+tests/test_cli.py::test_cli_help PASSED                                  [  4%]
+tests/test_cli.py::test_cli_run_e2e PASSED                               [  8%]
+tests/test_cli.py::test_cli_render_subcommand PASSED                     [ 12%]
+tests/test_downloader.py::test_is_youtube_url PASSED                     [ 16%]
+tests/test_downloader.py::test_download_youtube_video_mock PASSED        [ 20%]
+tests/test_moments.py::test_highlight_segment_model PASSED               [ 25%]
+tests/test_moments.py::test_select_moments_heuristic PASSED              [ 29%]
+tests/test_moments.py::test_select_moments_llm_success PASSED            [ 33%]
+tests/test_moments.py::test_select_moments_llm_fallback_on_error PASSED  [ 37%]
+tests/test_moments.py::test_save_and_load_highlights_json PASSED         [ 41%]
+tests/test_renderer.py::test_render_clip_and_ffprobe_verification PASSED [ 45%]
+tests/test_renderer.py::test_render_all_highlights PASSED                [ 50%]
+tests/test_subtitles.py::test_format_ass_time PASSED                     [ 54%]
+tests/test_subtitles.py::test_extract_words_for_clip PASSED              [ 58%]
+tests/test_subtitles.py::test_generate_ass_subtitles PASSED              [ 62%]
+tests/test_transcriber.py::test_format_timestamp_srt PASSED              [ 66%]
+tests/test_transcriber.py::test_save_and_load_transcript_json PASSED     [ 70%]
+tests/test_transcriber.py::test_save_transcript_srt PASSED               [ 75%]
+tests/test_transcriber.py::test_extract_audio_ffmpeg PASSED              [ 79%]
+tests/test_transcriber.py::test_transcribe_audio_mock PASSED             [ 83%]
+tests/test_web.py::test_web_index_page PASSED                            [ 87%]
+tests/test_web.py::test_web_process_and_render_flow PASSED               [ 91%]
+tests/test_youtube.py::test_format_youtube_time PASSED                   [ 95%]
+tests/test_youtube.py::test_generate_youtube_package PASSED              [100%]
+
+======================== 24 passed in 64.50s (0:01:04) ========================

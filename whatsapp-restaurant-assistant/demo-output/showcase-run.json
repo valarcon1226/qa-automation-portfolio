@@ -1,0 +1,30 @@
+﻿{
+  "live_tool_demo": [
+    {
+      "step": "Get Menu",
+      "status": 200,
+      "input": "{\"tool\": \"get_menu\", \"arguments\": {}}",
+      "replies": [
+        "Listo, aquí está el resultado: {\"dishes\": [{\"dish_id\": 1, \"name\": \"Bandeja Paisa\", \"category\": \"plato_fuerte\", \"price_cop\": 34000, \"available\": true, \"allergens\": \"gluten (chorizo)\"}, {\"dish_id\": 2, \"name\": \"Ajiaco Santafere\\u00f1o\", \"category\": \"plato_fuerte\", \"price_cop\": 29000, \"available\": true, \"allergens\": \"lacteos\"}, {\"dish_id\": 3, \"name\": \"Limonada de Coco\", \"category\": \"bebida\", \"price_cop\": 9000, \"available\": true, \"allergens\": \"lacteos\"}, {\"dish_id\": 4, \"name\": \"Lechona Tolimense\", \"category\": \"plato_fuerte\", \"price_cop\": 25000, \"available\": false, \"allergens\": \"ninguno\"}]}"
+      ]
+    },
+    {
+      "step": "Book Table for 4",
+      "status": 200,
+      "input": "{\"tool\": \"create_reservation\", \"arguments\": {\"date\": \"2026-11-24\", \"time\": \"19:00\", \"party_size\": 4}}",
+      "replies": [
+        "Listo, aquí está el resultado: {\"reservation_id\": 1, \"date\": \"2026-11-24\", \"time\": \"19:00\", \"party_size\": 4, \"status\": \"confirmed\"}"
+      ]
+    },
+    {
+      "step": "Event Lead (20 guests)",
+      "status": 200,
+      "input": "{\"tool\": \"register_event_lead\", \"arguments\": {\"event_type\": \"cumpleanos\", \"event_date\": \"2026-11-24\", \"guest_count\": 20, \"budget_cop\": 1500000, \"contact_name\": \"Laura Gomez\"}}",
+      "replies": [
+        "Listo, aquí está el resultado: {\"lead_id\": 2, \"status\": \"new\"}"
+      ]
+    }
+  ],
+  "eval_summary_count": 30,
+  "eval_passed": 9
+}

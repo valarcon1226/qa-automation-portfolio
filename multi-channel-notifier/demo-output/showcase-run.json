@@ -1,0 +1,102 @@
+﻿{
+  "available_templates": [
+    "daily_report",
+    "slack_alert",
+    "welcome_email"
+  ],
+  "notifications": [
+    {
+      "request": {
+        "template_name": "welcome_email",
+        "channels": [
+          "email",
+          "slack",
+          "telegram",
+          "discord"
+        ],
+        "priority": "high",
+        "recipients": {
+          "email": [
+            "customer@example.com"
+          ],
+          "telegram": [
+            "987654321"
+          ]
+        },
+        "payload": {
+          "user_name": "Sofia",
+          "system": "Order Automation Portal",
+          "subject": "Welcome to Order Automation Portal"
+        }
+      },
+      "api_status": 200,
+      "api_response": {
+        "notification_id": "00000000-0000-0000-0000-000000000001",
+        "status": "queued",
+        "message": "Notification queued for processing."
+      },
+      "subject": "Welcome to Order Automation Portal",
+      "text_body": "Hello Sofia,\n\nWelcome to Order Automation Portal!\n\nThanks for joining us.",
+      "has_html": true
+    },
+    {
+      "request": {
+        "template_name": "slack_alert",
+        "channels": [
+          "slack",
+          "discord"
+        ],
+        "priority": "high",
+        "recipients": {},
+        "payload": {
+          "severity": "HIGH",
+          "message": "Daily invoice batch completed with 2 files needing review.",
+          "system": "Invoice Processor"
+        }
+      },
+      "api_status": 200,
+      "api_response": {
+        "notification_id": "00000000-0000-0000-0000-000000000002",
+        "status": "queued",
+        "message": "Notification queued for processing."
+      },
+      "subject": "Slack Alert",
+      "text_body": ":rotating_light: *HIGH*: Daily invoice batch completed with 2 files needing review.\nSystem: Invoice Processor",
+      "has_html": false
+    },
+    {
+      "request": {
+        "template_name": "daily_report",
+        "channels": [
+          "email",
+          "telegram"
+        ],
+        "priority": "medium",
+        "recipients": {
+          "email": [
+            "ops@example.com"
+          ],
+          "telegram": [
+            "987654321"
+          ]
+        },
+        "payload": {
+          "report_date": "2026-11-22",
+          "summary": "All scheduled backups and price checks completed on time.",
+          "total_items": 148,
+          "subject": "Daily Operations Summary - 2026-11-22"
+        }
+      },
+      "api_status": 200,
+      "api_response": {
+        "notification_id": "00000000-0000-0000-0000-000000000003",
+        "status": "queued",
+        "message": "Notification queued for processing."
+      },
+      "subject": "Daily Operations Summary - 2026-11-22",
+      "text_body": "Daily Report — 2026-11-22\n\nSummary: All scheduled backups and price checks completed on time.\n\nTotal items processed: 148",
+      "has_html": false
+    }
+  ]
+}
+

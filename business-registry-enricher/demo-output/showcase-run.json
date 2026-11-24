@@ -1,0 +1,116 @@
+﻿python.exe : C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio 
+Gemini\Potrafolio-Automation\business-registry-enricher\.venv\Lib\site-packages\fastapi\testclient.py:1: 
+StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+At line:54 char:10
++ $out02 = & .\.venv\Scripts\python.exe $tmp2 2>&1 | Out-String
++          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\valent...ttpx2` instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  from starlette.testclient import TestClient as TestClient  # noqa
+{
+  "live_vies_lookups": [
+    {
+      "call": "1st lookup IE/6388047V",
+      "status": 200,
+      "body": {
+        "country": "IE",
+        "identifier": "6388047V",
+        "company_name": "GOOGLE IRELAND LIMITED",
+        "status": "valid",
+        "incorporation_date": null,
+        "raw_data": {
+          "countryCode": "IE",
+          "vatNumber": "6388047V",
+          "requestDate": "2026-11-22",
+          "valid": true,
+          "name": "GOOGLE IRELAND LIMITED",
+          "address": "3RD FLOOR, GORDON HOUSE, BARROW STREET, DUBLIN 4"
+        },
+        "cached": false
+      }
+    },
+    {
+      "call": "2nd lookup IE/6388047V (cached)",
+      "status": 200,
+      "body": {
+        "country": "IE",
+        "identifier": "6388047V",
+        "company_name": "GOOGLE IRELAND LIMITED",
+        "status": "valid",
+        "incorporation_date": null,
+        "raw_data": {
+          "countryCode": "IE",
+          "vatNumber": "6388047V",
+          "requestDate": "2026-11-22",
+          "valid": true,
+          "name": "GOOGLE IRELAND LIMITED",
+          "address": "3RD FLOOR, GORDON HOUSE, BARROW STREET, DUBLIN 4"
+        },
+        "cached": true
+      }
+    },
+    {
+      "call": "1st lookup LU/26375245",
+      "status": 200,
+      "body": {
+        "country": "LU",
+        "identifier": "26375245",
+        "company_name": "AMAZON EUROPE CORE S.A R.L.",
+        "status": "valid",
+        "incorporation_date": null,
+        "raw_data": {
+          "countryCode": "LU",
+          "vatNumber": "26375245",
+          "requestDate": "2026-11-22",
+          "valid": true,
+          "name": "AMAZON EUROPE CORE S.A R.L.",
+          "address": "38, AVENUE JOHN F. KENNEDY\nL-1855  LUXEMBOURG"
+        },
+        "cached": false
+      }
+    },
+    {
+      "call": "1st lookup DE/811115368",
+      "status": 200,
+      "body": {
+        "country": "DE",
+        "identifier": "811115368",
+        "company_name": "---",
+        "status": "valid",
+        "incorporation_date": null,
+        "raw_data": {
+          "countryCode": "DE",
+          "vatNumber": "811115368",
+          "requestDate": "2026-11-22",
+          "valid": true,
+          "name": "---",
+          "address": "---"
+        },
+        "cached": false
+      }
+    },
+    {
+      "call": "1st lookup ES/B86907926",
+      "status": 200,
+      "body": {
+        "country": "ES",
+        "identifier": "B86907926",
+        "company_name": "---",
+        "status": "invalid",
+        "incorporation_date": null,
+        "raw_data": {
+          "countryCode": "ES",
+          "vatNumber": "B86907926",
+          "requestDate": "2026-11-22",
+          "valid": false,
+          "name": "---",
+          "address": "---"
+        },
+        "cached": false
+      }
+    }
+  ],
+  "notes": "UK Companies House (CH_API_KEY) and France INSEE (INSEE_API_KEY) require external registry API keys; EU VIES SOAP endpoint queried live."
+}
+

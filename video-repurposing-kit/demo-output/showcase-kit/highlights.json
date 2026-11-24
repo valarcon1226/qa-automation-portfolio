@@ -1,0 +1,15 @@
+{
+  "video_file": "test_video_2min.mp4",
+  "highlights": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 30.0,
+      "duration": 30.0,
+      "title": "Momento Clave del Video",
+      "hook": "2.",
+      "score": 8.5,
+      "reason": "Segmento inicial de alta retención."
+    }
+  ]
+}

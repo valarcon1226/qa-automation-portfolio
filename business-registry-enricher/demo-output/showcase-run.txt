@@ -1,0 +1,45 @@
+﻿.venv\Scripts\python.exe -c '<Live EU VIES lookup + cache hit via FastAPI /api/v1/enrich>'
+=== FIRST CALL (Cache Miss -> Live EU VIES Lookup) ===
+GET /api/v1/enrich/IE/6388047V -> 200 {"country": "IE", "identifier": "6388047V", "company_name": "GOOGLE IRELAND LIMITED", "status": "valid", "incorporation_date": null, "raw_data": {"countryCode": "IE", "vatNumber": "6388047V", "requestDate": "2026-11-22", "valid": true, "name": "GOOGLE IRELAND LIMITED", "address": "3RD FLOOR, GORDON HOUSE, BARROW STREET, DUBLIN 4"}, "cached": false}
+GET /api/v1/enrich/LU/26375245 -> 200 {"country": "LU", "identifier": "26375245", "company_name": "AMAZON EUROPE CORE S.A R.L.", "status": "valid", "incorporation_date": null, "raw_data": {"countryCode": "LU", "vatNumber": "26375245", "requestDate": "2026-11-22", "valid": true, "name": "AMAZON EUROPE CORE S.A R.L.", "address": "38, AVENUE JOHN F. KENNEDY\nL-1855  LUXEMBOURG"}, "cached": false}
+GET /api/v1/enrich/DE/811115368 -> 200 {"country": "DE", "identifier": "811115368", "company_name": "---", "status": "valid", "incorporation_date": null, "raw_data": {"countryCode": "DE", "vatNumber": "811115368", "requestDate": "2026-11-22", "valid": true, "name": "---", "address": "---"}, "cached": false}
+GET /api/v1/enrich/ES/B86907926 -> 200 {"country": "ES", "identifier": "B86907926", "company_name": "---", "status": "invalid", "incorporation_date": null, "raw_data": {"countryCode": "ES", "vatNumber": "B86907926", "requestDate": "2026-11-22", "valid": false, "name": "---", "address": "---"}, "cached": false}
+
+=== SECOND CALL (Cache Hit -> Batch Return) ===
+POST /api/v1/enrich -> 200
+{
+  "results": [
+    {
+      "country": "IE",
+      "identifier": "6388047V",
+      "company_name": "GOOGLE IRELAND LIMITED",
+      "status": "valid",
+      "cached": true,
+      "error": null
+    },
+    {
+      "country": "LU",
+      "identifier": "26375245",
+      "company_name": "AMAZON EUROPE CORE S.A R.L.",
+      "status": "valid",
+      "cached": true,
+      "error": null
+    },
+    {
+      "country": "DE",
+      "identifier": "811115368",
+      "company_name": "---",
+      "status": "valid",
+      "cached": true,
+      "error": null
+    },
+    {
+      "country": "ES",
+      "identifier": "B86907926",
+      "company_name": "---",
+      "status": "invalid",
+      "cached": true,
+      "error": null
+    }
+  ]
+}

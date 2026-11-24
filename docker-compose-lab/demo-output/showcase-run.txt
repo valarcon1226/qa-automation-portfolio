@@ -1,0 +1,43 @@
+﻿# Command: docker compose -f docker-compose.yml -f docker-compose.local.yml --env-file .env.example config --services && py -3.13 scripts/sync_readme.py --check && backend\.venv\Scripts\python.exe -m pytest backend/tests -v
+
+=== Docker Compose Services (Full Topology) ===
+minio
+postgres
+n8n
+redis
+traefik
+celery-beat
+prometheus
+grafana
+celery-worker
+fastapi-gateway
+
+=== Docker Compose Config Validation ===
+exit_code=0
+
+=== README Sync Check ===
+README.md in sync
+exit_code=0
+
+=== Backend Health & Secret Tests ===
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.2, pluggy-1.6.0 -- C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\docker-compose-lab\backend\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\docker-compose-lab\backend
+configfile: pyproject.toml
+plugins: anyio-4.15.1, cov-7.1.0, timeout-2.4.0
+collecting ... collected 5 items
+
+backend\tests\test_main.py::test_health_ok_when_dependencies_up PASSED   [ 20%]
+backend\tests\test_main.py::test_health_503_when_redis_down PASSED       [ 40%]
+backend\tests\test_main.py::test_health_503_when_database_down PASSED    [ 60%]
+backend\tests\test_main.py::test_jwt_secret_is_read_from_file PASSED     [ 80%]
+backend\tests\test_main.py::test_api_refuses_to_start_without_secret_or_database PASSED [100%]
+
+============================== warnings summary ===============================
+backend\.venv\Lib\site-packages\starlette\testclient.py:40
+  C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\docker-compose-lab\backend\.venv\Lib\site-packages\starlette\testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 1 warning in 12.70s ========================

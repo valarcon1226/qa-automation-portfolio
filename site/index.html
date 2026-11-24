@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valentina Alarcon — Automation &amp; AI Engineering Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Valentina Alarcon: QA automation, AI engineering, model evaluation harnesses, and backend automation services."
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("portfolio-theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="projects.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#projects-section">Skip to projects</a>
+
+    <header class="site-header">
+      <div class="container">
+        <div class="header-top">
+          <div class="identity">
+            <h1>Valentina Alarcon</h1>
+            <p class="role-line">
+              Automation engineer: QA automation and AI engineering
+            </p>
+          </div>
+          <div class="header-actions">
+            <a
+              class="btn-link"
+              href="https://github.com/valarcon1226/qa-automation-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub repo
+            </a>
+            <button
+              type="button"
+              id="theme-toggle"
+              class="btn-theme"
+              aria-pressed="false"
+            >
+              <span class="theme-icon" aria-hidden="true"></span>
+              <span class="theme-label">Dark mode</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="about-me">
+          <p>
+            I'm an automation engineer with four years of experience, most of
+            them in QA automation, and I now focus on AI engineering: AI agents
+            that use tools to automate work on business documents and systems.
+          </p>
+          <p>
+            I test what I build the way I test any other software. Each project
+            fixes its thresholds before the run, measures against labelled data
+            or the real system, and says in its README where the numbers come
+            from and what the limits are.
+          </p>
+        </div>
+
+        <div class="stack-row">
+          <span class="stack-heading" id="stack-heading">What I work with</span>
+          <ul class="stack-list" aria-labelledby="stack-heading">
+            <li>Python</li>
+            <li>TypeScript</li>
+            <li>FastAPI</li>
+            <li>Playwright</li>
+            <li>Selenium</li>
+            <li>Cypress</li>
+            <li>pytest</li>
+            <li>Docker</li>
+            <li>GitHub Actions</li>
+            <li>PostgreSQL</li>
+            <li>n8n</li>
+            <li>LLM APIs</li>
+            <li>Ollama</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="controls-section" aria-labelledby="filters-heading">
+        <div class="container">
+          <h2 id="filters-heading" class="sr-only">Search and filter projects</h2>
+
+          <div class="controls-top">
+            <div role="search" class="search-wrap">
+              <label for="search-input" class="search-label">
+                Search projects
+              </label>
+              <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search by name, summary, or technology..."
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="controls-status">
+              <p
+                id="results-count"
+                class="results-count"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                Showing 40 of 40 projects
+              </p>
+              <button
+                type="button"
+                id="clear-filters"
+                class="btn-clear"
+                disabled
+              >
+                Clear filters
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="filter-row"
+            role="group"
+            aria-labelledby="category-filter-label"
+          >
+            <span id="category-filter-label" class="filter-label">
+              Category
+            </span>
+            <div id="category-chips" class="chip-list"></div>
+          </div>
+
+          <div
+            class="filter-row"
+            role="group"
+            aria-labelledby="tech-filter-label"
+          >
+            <span id="tech-filter-label" class="filter-label">
+              Technology
+            </span>
+            <div id="tech-chips" class="chip-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects-section"
+        class="projects-section"
+        aria-labelledby="projects-heading"
+        tabindex="-1"
+      >
+        <div class="container">
+          <h2 id="projects-heading" class="sr-only">Projects</h2>
+          <div id="projects-grid" class="projects-grid"></div>
+
+          <div id="empty-state" class="empty-state" hidden>
+            <p class="empty-title">No projects match the active filters.</p>
+            <p class="empty-hint">
+              Try removing a technology filter, selecting All categories, or
+              clearing the search term.
+            </p>
+            <button type="button" id="empty-clear-btn" class="btn-clear-empty">
+              Clear filters
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <section class="evidence-section" aria-labelledby="evidence-heading">
+          <h2 id="evidence-heading">How to read the evidence</h2>
+          <ul class="evidence-list">
+            <li>
+              A CI badge shows the last run on <code>main</code>. Workflows are
+              in
+              <a id="workflows-link" href="../../.github/workflows/"><code>.github/workflows</code></a>. The heavier suites (resilience, migration, performance) run in
+              scheduled nightly jobs.
+            </li>
+            <li>
+              Each findings document separates what was measured from the
+              explanation, and says so when a cause is not confirmed.
+            </li>
+            <li>
+              Versions of the systems under test are pinned in every compose
+              file, so a result can be reproduced.
+            </li>
+          </ul>
+        </section>
+
+        <div class="footer-meta">
+          <a id="projects-md-link" href="../../PROJECTS.md">
+            Full project table in PROJECTS.md
+          </a>
+          <a
+            href="https://github.com/valarcon1226/qa-automation-portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/valarcon1226/qa-automation-portfolio
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

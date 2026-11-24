@@ -1,0 +1,24 @@
+.venv\Scripts\python.exe -m pytest -v 
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-8.3.5, pluggy-1.6.0
+rootdir: C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\ecommerce-order-automation
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.15.1, cov-6.0.0, timeout-2.3.1
+collected 31 items
+
+tests\test_admin_auth.py .....                                           [ 16%]
+tests\test_csrf.py ....                                                  [ 29%]
+tests\test_export.py ..                                                  [ 35%]
+tests\test_idempotency.py .....                                          [ 51%]
+tests\test_normalization.py ....                                         [ 64%]
+tests\test_order_status.py ...                                           [ 74%]
+tests\test_webhooks.py ........                                          [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\starlette\testclient.py:37
+  C:\Users\valentina.alarcon\Documents\PER\Cursos\Claudia\Portfolio Gemini\Potrafolio-Automation\ecommerce-order-automation\.venv\Lib\site-packages\starlette\testclient.py:37: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 31 passed, 1 warning in 33.08s ========================

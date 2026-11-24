@@ -1,0 +1,85 @@
+﻿{
+  "raw_csv": "client_name,email,phone,city,empty_col\n  Acme Logistics SAS ,  sales@acmelogistics.com ,300 555 0142, bogota ,\n,,,,\n  Acme Logistics SAS ,  sales@acmelogistics.com ,300 555 0142, bogota ,\n  Northstar Clinic , info@northstar.org , (601) 444-8899 , medellin ,\n  Bistro Central , bad-email-at-bistro , , cali ,\n  Delta Retail Ltd , contact@deltaretail.co , +57 315 222 3344 , , \n",
+  "raw_rows": 6,
+  "raw_columns": [
+    "client_name",
+    "email",
+    "phone",
+    "city",
+    "empty_col"
+  ],
+  "api_status": 200,
+  "cleaned_rows": [
+    {
+      "client_name": "Acme Logistics SAS",
+      "email": "sales@acmelogistics.com",
+      "phone": "300 555 0142",
+      "city": "bogota",
+      "empty_col": "Pending"
+    },
+    {
+      "client_name": "Northstar Clinic",
+      "email": "info@northstar.org",
+      "phone": "(601) 444-8899",
+      "city": "medellin",
+      "empty_col": "Pending"
+    },
+    {
+      "client_name": "Bistro Central",
+      "email": "bad-email-at-bistro",
+      "phone": "",
+      "city": "cali",
+      "empty_col": "Pending"
+    },
+    {
+      "client_name": "Delta Retail Ltd",
+      "email": "contact@deltaretail.co",
+      "phone": "+57 315 222 3344",
+      "city": "",
+      "empty_col": ""
+    }
+  ],
+  "enriched_rows": [
+    {
+      "client_name": "Acme Logistics SAS",
+      "email": "sales@acmelogistics.com",
+      "phone": "300 555 0142",
+      "city": "bogota",
+      "empty_col": "Pending",
+      "email_valid": true,
+      "phone_e164": "+573005550142",
+      "phone_valid": true
+    },
+    {
+      "client_name": "Northstar Clinic",
+      "email": "info@northstar.org",
+      "phone": "(601) 444-8899",
+      "city": "medellin",
+      "empty_col": "Pending",
+      "email_valid": true,
+      "phone_e164": "+576014448899",
+      "phone_valid": true
+    },
+    {
+      "client_name": "Bistro Central",
+      "email": "bad-email-at-bistro",
+      "phone": "",
+      "city": "cali",
+      "empty_col": "Pending",
+      "email_valid": false,
+      "phone_e164": "",
+      "phone_valid": false
+    },
+    {
+      "client_name": "Delta Retail Ltd",
+      "email": "contact@deltaretail.co",
+      "phone": "+57 315 222 3344",
+      "city": "",
+      "empty_col": "",
+      "email_valid": true,
+      "phone_e164": "+573152223344",
+      "phone_valid": true
+    }
+  ]
+}
+
